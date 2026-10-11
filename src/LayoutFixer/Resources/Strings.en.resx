@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutCloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="AboutCloseTooltip" xml:space="preserve">
+    <value>Close the About window.</value>
+  </data>
+  <data name="AboutGitHubLink" xml:space="preserve">
+    <value>github.com/MBudkin/LayoutFixer</value>
+  </data>
+  <data name="AboutGitHubTooltip" xml:space="preserve">
+    <value>Open the project page on GitHub.</value>
+  </data>
+  <data name="AboutDescriptionText" xml:space="preserve">
+    <value>LayoutFixer is a utility for quickly correcting text typed in the wrong keyboard layout. It converts words and text fragments between Russian and English layouts and, when needed, switches the active keyboard layout.
+
+The application runs in the Windows notification area. You can correct text manually with hotkeys or let the automatic mode do it: it recognizes a word typed in the wrong layout while you type or right after Space/Enter. Your own dictionary and abbreviation replacement adapt it to you.</value>
+  </data>
+  <data name="AboutUsageHeading" xml:space="preserve">
+    <value>How to use:</value>
+  </data>
+  <data name="AboutUsageText" xml:space="preserve">
+    <value>•  Pause — fix the last typed word;
+•  Shift + Pause — convert the selected text fragment;
+•  Ctrl + Shift + F9 — toggle the case of the selection or last word;
+•  Ctrl + Shift + F10 — convert the selection or last word between Russian and transliteration;
+•  Ctrl + Shift + Space — enable or disable the application.</value>
+  </data>
+  <data name="AboutUsageNote" xml:space="preserve">
+    <value>All keyboard shortcuts can be changed in Settings.</value>
+  </data>
+  <data name="AboutPrivacyHeading" xml:space="preserve">
+    <value>Privacy:</value>
+  </data>
+  <data name="AboutPrivacyText" xml:space="preserve">
+    <value>LayoutFixer processes text locally on your computer. Typed text is never saved to disk or sent anywhere: only a temporary in-memory buffer of recent keystrokes is used. The only network access is the optional update check on GitHub (the latest version number); it can be turned off in Settings.</value>
+  </data>
+  <data name="AboutDataHeading" xml:space="preserve">
+    <value>Data storage:</value>
+  </data>
+  <data name="AboutDataText" xml:space="preserve">
+    <value>All files are in %AppData%\LayoutFixer:
+• settings.json — program settings;
+• user-dictionary.json — your user dictionary (your words);
+• user-replacements.json — your user replacements;
+• debug.log — debug log. Off by default; enabled manually in settings and automatically deleted when disabled.</value>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="AboutWindowTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>LayoutFixer</value>
+  </data>
+  <data name="AutostartUpdateFailed" xml:space="preserve">
+    <value>Could not update autostart.</value>
+  </data>
+  <data name="SettingsAutoMode" xml:space="preserve">
+    <value>Automatic layout fix</value>
+  </data>
+  <data name="SettingsAutoModeTooltip" xml:space="preserve">
+    <value>When you press Space, Enter or Tab, the last word is checked against the built-in Russian and English dictionaries. If it is clearly a word of the other layout, it is converted automatically.</value>
+  </data>
+  <data name="SettingsAutoCapitalizeSentences" xml:space="preserve">
+    <value>Capitalize the first word of a new sentence</value>
+  </data>
+  <data name="SettingsAutoCapitalizeSentencesTooltip" xml:space="preserve">
+    <value>After a period, exclamation mark or question mark followed by whitespace, the first letter of the next word is capitalized automatically. The first Break press undoes only this change.</value>
+  </data>
+  <data name="SettingsFixAccidentalCapsLock" xml:space="preserve">
+    <value>Fix accidentally enabled Caps Lock</value>
+  </data>
+  <data name="SettingsFixAccidentalCapsLockTooltip" xml:space="preserve">
+    <value>When Caps Lock is on and a word looks like “hELLO”, the application changes it to “Hello” and turns Caps Lock off. Normal upper- and lowercase words are left unchanged.</value>
+  </data>
+  <data name="SettingsAlwaysConvertSingleLetters" xml:space="preserve">
+    <value>Always fix the Russian one-letter words (в, а, я, и, с, у, о, к)</value>
+  </data>
+  <data name="SettingsAlwaysConvertSingleLettersTooltip" xml:space="preserve">
+    <value>A single lowercase letter typed in the English layout (d, f, z, b, c, e, j, r) always becomes the Russian word, even right after an English word: "Claude b ChatGPT" → "Claude и ChatGPT". The layout stays English after such a letter. Capital letters ("Plan B") are not changed. When off, the letter stays as typed after an ordinary English word ("plan b").</value>
+  </data>
+  <data name="SettingsTabAsSeparator" xml:space="preserve">
+    <value>Use Tab as a word separator</value>
+  </data>
+  <data name="SettingsTabAsSeparatorTooltip" xml:space="preserve">
+    <value>When on, pressing Tab finishes the current word and triggers an auto-check (like Space/Enter). When off, Tab does not trigger a check but clears the typing buffer.</value>
+  </data>
+  <data name="SettingsManualLearnGroup" xml:space="preserve">
+    <value>Remember a word fixed by the last-word hotkey ({0})</value>
+  </data>
+  <data name="SettingsManualLearnGroupTooltip" xml:space="preserve">
+    <value>What to do with a word corrected by the last-word hotkey (Pause).</value>
+  </data>
+  <data name="SettingsManualLearnRemember" xml:space="preserve">
+    <value>Remember</value>
+  </data>
+  <data name="SettingsManualLearnRememberTooltip" xml:space="preserve">
+    <value>Save the corrected word to the user dictionary automatically, without asking.</value>
+  </data>
+  <data name="SettingsManualLearnAsk" xml:space="preserve">
+    <value>Ask to remember</value>
+  </data>
+  <data name="SettingsManualLearnAskTooltip" xml:space="preserve">
+    <value>Show a popup offering to save the word to the user dictionary.</value>
+  </data>
+  <data name="SettingsManualLearnNever" xml:space="preserve">
+    <value>Never remember</value>
+  </data>
+  <data name="SettingsManualLearnNeverTooltip" xml:space="preserve">
+    <value>Do not save manually corrected words to the user dictionary.</value>
+  </data>
+  <data name="SettingsSelectionLearnGroup" xml:space="preserve">
+    <value>Remember a word fixed from a selection ({0})</value>
+  </data>
+  <data name="SettingsSelectionLearnGroupTooltip" xml:space="preserve">
+    <value>What to do with a word corrected from a selected fragment (Shift+Pause).</value>
+  </data>
+  <data name="SettingsSelectionLearnAsk" xml:space="preserve">
+    <value>Ask to remember</value>
+  </data>
+  <data name="SettingsSelectionLearnAskTooltip" xml:space="preserve">
+    <value>Show a popup offering to save the selected word to the user dictionary.</value>
+  </data>
+  <data name="SettingsSelectionLearnNever" xml:space="preserve">
+    <value>Never remember</value>
+  </data>
+  <data name="SettingsSelectionLearnNeverTooltip" xml:space="preserve">
+    <value>Do not save selected words to the user dictionary.</value>
+  </data>
+  <data name="SettingsNotificationDurationLabel" xml:space="preserve">
+    <value>Show notifications and prompts for</value>
+  </data>
+  <data name="SettingsNotificationDurationUnit" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="SettingsNotificationDurationTooltip" xml:space="preserve">
+    <value>How many seconds popups and prompts stay on screen (1 to 300).</value>
+  </data>
+  <data name="UserReplacementsRespectPunctuation" xml:space="preserve">
+    <value>Respect punctuation</value>
+  </data>
+  <data name="UserReplacementsRespectPunctuationTooltip" xml:space="preserve">
+    <value>When on, a replacement also fires when the trigger is typed with punctuation (e.g. "thx," -> "thanks,"). Surrounding punctuation is preserved.</value>
+  </data>
+  <data name="SettingsDebugLog" xml:space="preserve">
+    <value>Debug log</value>
+  </data>
+  <data name="SettingsDebugLogTooltip" xml:space="preserve">
+    <value>Write a detailed log to %AppData%\LayoutFixer\debug.log (keystrokes, decisions). Off by default for privacy. The file is deleted when disabled.</value>
+  </data>
+  <data name="SettingsOpenUserDictionaryButton" xml:space="preserve">
+    <value>Open dictionary…</value>
+  </data>
+  <data name="SettingsOpenUserDictionaryButtonTooltip" xml:space="preserve">
+    <value>Open the user dictionary manager to view, add, remove, search or clear learned words.</value>
+  </data>
+  <data name="TrayUserDictionary" xml:space="preserve">
+    <value>User Dictionary</value>
+  </data>
+  <data name="TrayUserDictionaryTooltip" xml:space="preserve">
+    <value>Manage the words you added to the user dictionary.</value>
+  </data>
+  <data name="TrayUserReplacements" xml:space="preserve">
+    <value>User replacements</value>
+  </data>
+  <data name="TrayUserReplacementsTooltip" xml:space="preserve">
+    <value>Manage text replacements: typing a word and Space replaces it with the text you set.</value>
+  </data>
+  <data name="TrayAutoReplace" xml:space="preserve">
+    <value>Auto-replace</value>
+  </data>
+  <data name="TrayAutoReplaceTooltip" xml:space="preserve">
+    <value>Enable or disable user text replacements (typing a word and Space replaces it).</value>
+  </data>
+  <data name="SettingsAutoReplace" xml:space="preserve">
+    <value>Replace abbreviations with text (ty → thank you)</value>
+  </data>
+  <data name="SettingsAutoReplaceTooltip" xml:space="preserve">
+    <value>Typing a word from your replacements list and pressing Space replaces it with the text you set.</value>
+  </data>
+  <data name="SettingsOpenUserReplacementsButton" xml:space="preserve">
+    <value>Open replacements…</value>
+  </data>
+  <data name="SettingsOpenUserReplacementsButtonTooltip" xml:space="preserve">
+    <value>Manage text replacements (e.g. pt → hello).</value>
+  </data>
+  <data name="UserReplacementsWindowTitle" xml:space="preserve">
+    <value>User replacements</value>
+  </data>
+  <data name="UserReplacementsHint" xml:space="preserve">
+    <value>Type an abbreviation from the "From" column and press Space, Enter, Tab or "-" — it is replaced with the "To" text. Changes are saved immediately. Turning replacement on/off and punctuation handling are in Settings → Dictionaries.</value>
+  </data>
+  <data name="UserReplacementsAddButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UserReplacementsRemoveButton" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="UserReplacementsClearButton" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="UserReplacementsAddTooltip" xml:space="preserve">
+    <value>Add a new replacement pair.</value>
+  </data>
+  <data name="UserReplacementsRemoveTooltip" xml:space="preserve">
+    <value>Remove the selected pair.</value>
+  </data>
+  <data name="UserReplacementsClearTooltip" xml:space="preserve">
+    <value>Remove all pairs.</value>
+  </data>
+  <data name="UserReplacementsClearConfirm" xml:space="preserve">
+    <value>Remove all replacement pairs?</value>
+  </data>
+  <data name="UserReplacementsColTrigger" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="UserReplacementsColReplacement" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="UserReplacementsColCaseSensitive" xml:space="preserve">
+    <value>Case sensitive</value>
+  </data>
+  <data name="UserReplacementsColEnabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="UserDictionaryWindowTitle" xml:space="preserve">
+    <value>User Dictionary</value>
+  </data>
+  <data name="UserDictionarySearch" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="UserDictionaryAddLabel" xml:space="preserve">
+    <value>Add word:</value>
+  </data>
+  <data name="UserDictionaryAddButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UserDictionaryRemoveButton" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="UserDictionaryClearButton" xml:space="preserve">
+    <value>Clear all</value>
+  </data>
+  <data name="UserDictionaryClearConfirm" xml:space="preserve">
+    <value>Remove all words from the "{0}" list ({1})?</value>
+  </data>
+  <data name="UserDictionaryCount" xml:space="preserve">
+    <value>{0} word(s)</value>
+  </data>
+  <data name="UserDictionaryCountFiltered" xml:space="preserve">
+    <value>{0} of {1} word(s)</value>
+  </data>
+  <data name="UserDictionaryWordWithoutLetters" xml:space="preserve">
+    <value>A word must contain at least one letter.</value>
+  </data>
+  <data name="AddToDictionaryPromptText" xml:space="preserve">
+    <value>Add “{0}” ({1}) to the user dictionary?</value>
+  </data>
+  <data name="AddToDictionaryYes" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddToDictionaryNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NotificationWordAddedToUserDictionary" xml:space="preserve">
+    <value>Word “{0}” added to the user dictionary.</value>
+  </data>
+  <data name="NotificationWordRemovedFromUserDictionary" xml:space="preserve">
+    <value>Word “{0}” removed from the user dictionary.</value>
+  </data>
+  <data name="WordAddedPopupUndo" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="UserDictionaryExportButton" xml:space="preserve">
+    <value>Export…</value>
+  </data>
+  <data name="UserDictionaryExportTooltip" xml:space="preserve">
+    <value>Save all words to JSON or to a text file (one word per line).</value>
+  </data>
+  <data name="UserDictionaryImportButton" xml:space="preserve">
+    <value>Import…</value>
+  </data>
+  <data name="UserDictionaryImportTooltip" xml:space="preserve">
+    <value>Add words from an exported JSON file or from a text file (one word per line). Existing words are kept, duplicates are skipped.</value>
+  </data>
+  <data name="UserDictionaryExportDone" xml:space="preserve">
+    <value>Exported {0} word(s).</value>
+  </data>
+  <data name="UserDictionaryImportDone" xml:space="preserve">
+    <value>Imported {0} new word(s).</value>
+  </data>
+  <data name="UserDictionaryImportFailed" xml:space="preserve">
+    <value>Could not read the file. Make sure it is a valid exported dictionary.</value>
+  </data>
+  <data name="ErrorDialogTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="HotkeyInvalidFormat" xml:space="preserve">
+    <value>Invalid hotkey format for “{0}”: {1}</value>
+  </data>
+  <data name="HotkeyRegistrationFailed" xml:space="preserve">
+    <value>Could not register the hotkey for “{0}”: {1}. It may already be used by another application.</value>
+  </data>
+  <data name="KeyboardHookFailed" xml:space="preserve">
+    <value>Could not attach the keyboard hook. Last-word conversion will not work until the app is restarted.</value>
+  </data>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LanguageRussian" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="LanguageSystemDefault" xml:space="preserve">
+    <value>System Default</value>
+  </data>
+  <data name="NotificationAutoModeEnabled" xml:space="preserve">
+    <value>Auto-fix enabled.</value>
+  </data>
+  <data name="NotificationAutoModeDisabled" xml:space="preserve">
+    <value>Auto-fix disabled.</value>
+  </data>
+  <data name="NotificationLanguageChanged" xml:space="preserve">
+    <value>Interface language changed.</value>
+  </data>
+  <data name="NotificationStarted" xml:space="preserve">
+    <value>LayoutFixer is running in the notification area.</value>
+  </data>
+  <data name="NotificationNoConvertibleWord" xml:space="preserve">
+    <value>No convertible word found.</value>
+  </data>
+  <data name="SendInputFailed" xml:space="preserve">
+    <value>Could not insert the fixed text. The target window may be blocking input.</value>
+  </data>
+  <data name="SecondInstanceMessage" xml:space="preserve">
+    <value>LayoutFixer is already running. Open Settings from the notification area icon.</value>
+  </data>
+  <data name="SettingsClearBufferAfterConversion" xml:space="preserve">
+    <value>Clear buffer after conversion</value>
+  </data>
+  <data name="SettingsClearBufferAfterConversionTooltip" xml:space="preserve">
+    <value>Clear the short in-memory typing buffer after each conversion.</value>
+  </data>
+  <data name="SettingsCloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="SettingsCloseTooltip" xml:space="preserve">
+    <value>Close the Settings window.</value>
+  </data>
+  <data name="SettingsHotkeyCapturedStatus" xml:space="preserve">
+    <value>Hotkey saved.</value>
+  </data>
+  <data name="SettingsHotkeyConvertLastWord" xml:space="preserve">
+    <value>Convert Last Word</value>
+  </data>
+  <data name="SettingsHotkeyDuplicateStatus" xml:space="preserve">
+    <value>This hotkey is already used in LayoutFixer settings.</value>
+  </data>
+  <data name="SettingsHotkeyHint" xml:space="preserve">
+    <value>Click a field and press the new key combination.</value>
+  </data>
+  <data name="SettingsHotkeyModifierOnlyStatus" xml:space="preserve">
+    <value>Press a key together with modifiers, not only Ctrl/Shift/Alt.</value>
+  </data>
+  <data name="SettingsHotkeysRestoredStatus" xml:space="preserve">
+    <value>Hotkeys reset.</value>
+  </data>
+  <data name="SettingsHotkeyTextBoxTooltip" xml:space="preserve">
+    <value>Put the cursor in this field and press a new key combination.</value>
+  </data>
+  <data name="SettingsHotkeyToggleEnabled" xml:space="preserve">
+    <value>Enable/Disable auto-correction</value>
+  </data>
+  <data name="SettingsHotkeyToggleCase" xml:space="preserve">
+    <value>Toggle case of selection or last word</value>
+  </data>
+  <data name="SettingsHotkeyTransliterate" xml:space="preserve">
+    <value>Russian ↔ transliteration for selection or last word</value>
+  </data>
+  <data name="SettingsInvertEachCharacterCase" xml:space="preserve">
+    <value>Invert the case of each character separately</value>
+  </data>
+  <data name="SettingsInvertEachCharacterCaseTooltip" xml:space="preserve">
+    <value>Off: the entire word becomes uppercase or lowercase. On: every letter changes to the opposite case, for example “Hello” → “hELLO”.</value>
+  </data>
+  <data name="SettingsHotkeyConvertSelection" xml:space="preserve">
+    <value>Convert Selected Text</value>
+  </data>
+  <data name="SettingsInterfaceLanguageLabel" xml:space="preserve">
+    <value>Interface language:</value>
+  </data>
+  <data name="SettingsInterfaceLanguageTooltip" xml:space="preserve">
+    <value>Choose the interface language or use the Windows language.</value>
+  </data>
+  <data name="SettingsInvalidJson" xml:space="preserve">
+    <value>The settings file is damaged or has an invalid format. Default settings were used.</value>
+  </data>
+  <data name="SettingsLanguageChangedStatus" xml:space="preserve">
+    <value>Language applied.</value>
+  </data>
+  <data name="SettingsSavedStatus" xml:space="preserve">
+    <value>Settings saved.</value>
+  </data>
+  <data name="SettingsSaveFailed" xml:space="preserve">
+    <value>Could not save settings.</value>
+  </data>
+  <data name="SettingsShowNotifications" xml:space="preserve">
+    <value>Show notifications</value>
+  </data>
+  <data name="SettingsShowNotificationsTooltip" xml:space="preserve">
+    <value>Shows short notifications in the Windows notification area.</value>
+  </data>
+  <data name="SettingsPlaySound" xml:space="preserve">
+    <value>Play sound on conversion</value>
+  </data>
+  <data name="SettingsPlaySoundTooltip" xml:space="preserve">
+    <value>Play a short sound on a successful conversion.</value>
+  </data>
+  <data name="SettingsRestoreHotkeysButton" xml:space="preserve">
+    <value>Restore defaults</value>
+  </data>
+  <data name="SettingsRestoreHotkeysTooltip" xml:space="preserve">
+    <value>Restore the default hotkeys.</value>
+  </data>
+  <data name="SettingsSaveOrAutostartFailed" xml:space="preserve">
+    <value>Could not save settings or update autostart.</value>
+  </data>
+  <data name="SettingsStartWithWindows" xml:space="preserve">
+    <value>Start with Windows</value>
+  </data>
+  <data name="SettingsStartWithWindowsTooltip" xml:space="preserve">
+    <value>Adds LayoutFixer to autostart for the current Windows user.</value>
+  </data>
+  <data name="SettingsWindowTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="TrayAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="TrayAboutTooltip" xml:space="preserve">
+    <value>Show application information.</value>
+  </data>
+  <data name="TrayEnabled" xml:space="preserve">
+    <value>Auto-correction</value>
+  </data>
+  <data name="TrayEnabledTooltip" xml:space="preserve">
+    <value>Enable or disable automatic layout correction. Manual hotkey conversion always works.</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="TrayExitTooltip" xml:space="preserve">
+    <value>Close the application.</value>
+  </data>
+  <data name="TraySettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="TraySettingsTooltip" xml:space="preserve">
+    <value>Open LayoutFixer settings.</value>
+  </data>
+  <data name="TrayTooltip" xml:space="preserve">
+    <value>LayoutFixer</value>
+  </data>
+  <data name="UnhandledProcessError" xml:space="preserve">
+    <value>An internal error occurred. The application will close.</value>
+  </data>
+  <data name="UnhandledUiError" xml:space="preserve">
+    <value>An interface error occurred. Continue working or restart the application.</value>
+  </data>
+  <data name="UserReplacementsExportButton" xml:space="preserve">
+    <value>Export…</value>
+  </data>
+  <data name="UserReplacementsExportTooltip" xml:space="preserve">
+    <value>Save all replacement pairs to a JSON file.</value>
+  </data>
+  <data name="UserReplacementsImportButton" xml:space="preserve">
+    <value>Import…</value>
+  </data>
+  <data name="UserReplacementsImportTooltip" xml:space="preserve">
+    <value>Load replacement pairs from a JSON file. Existing pairs are kept, duplicates skipped.</value>
+  </data>
+  <data name="UserReplacementsJsonFilter" xml:space="preserve">
+    <value>JSON files (*.json)|*.json|All files (*.*)|*.*</value>
+  </data>
+  <data name="UserReplacementsExportDone" xml:space="preserve">
+    <value>Exported {0} pair(s).</value>
+  </data>
+  <data name="UserReplacementsImportDone" xml:space="preserve">
+    <value>Imported {0} new pair(s).</value>
+  </data>
+  <data name="UserReplacementsImportFailed" xml:space="preserve">
+    <value>Could not read the file. Make sure it is a valid exported replacements file.</value>
+  </data>
+  <data name="SettingsOpenDebugLogButton" xml:space="preserve">
+    <value>Open log…</value>
+  </data>
+  <data name="SettingsOpenDebugLogTooltip" xml:space="preserve">
+    <value>Open the debug log (debug.log) in a text editor.</value>
+  </data>
+  <data name="SettingsDebugLogMissing" xml:space="preserve">
+    <value>The log is empty. Enable the debug log and reproduce the actions.</value>
+  </data>
+  <data name="SettingsExportAllButton" xml:space="preserve">
+    <value>Export all…</value>
+  </data>
+  <data name="SettingsExportAllTooltip" xml:space="preserve">
+    <value>Save settings, user dictionary and replacements into a single JSON file — to transfer to another computer.</value>
+  </data>
+  <data name="SettingsImportAllButton" xml:space="preserve">
+    <value>Import all…</value>
+  </data>
+  <data name="SettingsImportAllTooltip" xml:space="preserve">
+    <value>Load settings, dictionary and replacements from a backup file. Settings are replaced; words and pairs are merged (duplicates skipped).</value>
+  </data>
+  <data name="SettingsBackupJsonFilter" xml:space="preserve">
+    <value>LayoutFixer backup (*.json)|*.json|All files (*.*)|*.*</value>
+  </data>
+  <data name="SettingsBackupExportDone" xml:space="preserve">
+    <value>Backup created: {0} word(s), {1} pair(s).</value>
+  </data>
+  <data name="SettingsBackupImportDone" xml:space="preserve">
+    <value>Imported: {0} word(s), {1} pair(s). Settings applied.</value>
+  </data>
+  <data name="SettingsBackupImportFailed" xml:space="preserve">
+    <value>Could not read the file. Make sure it is a valid LayoutFixer backup.</value>
+  </data>
+  <data name="SettingsSoundVariantLabel" xml:space="preserve">
+    <value>Sound:</value>
+  </data>
+  <data name="SettingsSoundVariantTooltip" xml:space="preserve">
+    <value>Sound played on a successful layout conversion.</value>
+  </data>
+  <data name="SettingsSound1" xml:space="preserve">
+    <value>Sound 1</value>
+  </data>
+  <data name="SettingsSound2" xml:space="preserve">
+    <value>Sound 2</value>
+  </data>
+  <data name="SettingsSoundCustom" xml:space="preserve">
+    <value>Custom…</value>
+  </data>
+  <data name="SettingsSoundPreviewButton" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="SettingsSoundPreviewTooltip" xml:space="preserve">
+    <value>Preview the selected sound at the current volume.</value>
+  </data>
+  <data name="SettingsSoundCustomPathLabel" xml:space="preserve">
+    <value>File:</value>
+  </data>
+  <data name="SettingsSoundBrowseButton" xml:space="preserve">
+    <value>Browse…</value>
+  </data>
+  <data name="SettingsSoundBrowseTooltip" xml:space="preserve">
+    <value>Choose your own WAV file.</value>
+  </data>
+  <data name="SettingsSoundVolumeLabel" xml:space="preserve">
+    <value>Volume:</value>
+  </data>
+  <data name="SettingsSoundVolumeTooltip" xml:space="preserve">
+    <value>Playback volume (0–100%).</value>
+  </data>
+  <data name="SettingsSoundVolumeValue" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="SettingsSoundFileFilter" xml:space="preserve">
+    <value>WAV sounds (*.wav)|*.wav|All files (*.*)|*.*</value>
+  </data>
+  <data name="SettingsTrayIconGroup" xml:space="preserve">
+    <value>Tray icon:</value>
+  </data>
+  <data name="SettingsTrayIconTooltip" xml:space="preserve">
+    <value>Choose what LayoutFixer shows in the Windows notification area.</value>
+  </data>
+  <data name="SettingsTrayIconProgram" xml:space="preserve">
+    <value>Program icon</value>
+  </data>
+  <data name="SettingsTrayIconProgramTooltip" xml:space="preserve">
+    <value>Show the LayoutFixer icon. It is colored when auto-correction is on and grayscale when it is off.</value>
+  </data>
+  <data name="SettingsTrayIconLanguage" xml:space="preserve">
+    <value>Layout language</value>
+  </data>
+  <data name="SettingsTrayIconLanguageTooltip" xml:space="preserve">
+    <value>Show Ru or En for the current keyboard layout.</value>
+  </data>
+  <data name="SettingsTrayIconFlag" xml:space="preserve">
+    <value>Flag</value>
+  </data>
+  <data name="SettingsTrayIconFlagTooltip" xml:space="preserve">
+    <value>Show a Russian or American flag for the current keyboard layout.</value>
+  </data>
+  <data name="ReportIssueButton" xml:space="preserve">
+    <value>Report an issue</value>
+  </data>
+  <data name="ReportIssueTooltip" xml:space="preserve">
+    <value>Open the LayoutFixer issue tracker on GitHub.</value>
+  </data>
+  <data name="TrayExcludeApp" xml:space="preserve">
+    <value>Don't switch in {0}</value>
+  </data>
+  <data name="TrayExcludeAppTooltip" xml:space="preserve">
+    <value>Turn automatic switching, auto-replacement and case fixes off or back on in the last active program. Hotkeys keep working.</value>
+  </data>
+  <data name="NotificationAppExcluded" xml:space="preserve">
+    <value>Automatic switching is off in {0}</value>
+  </data>
+  <data name="NotificationAppIncluded" xml:space="preserve">
+    <value>Automatic switching works again in {0}</value>
+  </data>
+  <data name="SettingsFixTwoInitialCapitals" xml:space="preserve">
+    <value>Fix TWo INitial CApitals</value>
+  </data>
+  <data name="SettingsFixTwoInitialCapitalsTooltip" xml:space="preserve">
+    <value>When Shift is released one letter too late ("THis"), the word becomes "This". Abbreviations and words such as "IDs", "GHz", "iPhone" are left alone. The first Break press restores what you typed.</value>
+  </data>
+  <data name="SettingsDisableInFullscreen" xml:space="preserve">
+    <value>Don't switch in full-screen applications (games, videos, presentations)</value>
+  </data>
+  <data name="SettingsDisableInFullscreenTooltip" xml:space="preserve">
+    <value>While a borderless full-screen window is in front, automatic switching, auto-replacement and case fixes are off. Manual hotkeys keep working.</value>
+  </data>
+  <data name="SettingsPasswordFieldsNote" xml:space="preserve">
+    <value>In password fields LayoutFixer never records or corrects anything — always.</value>
+  </data>
+  <data name="SettingsExcludedAppsLabel" xml:space="preserve">
+    <value>Automatic switching, text replacement and case fixes are off in these programs. A program can also be added from the tray icon menu: "Don't switch in …".</value>
+  </data>
+  <data name="SettingsExcludedAppsAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="SettingsExcludedAppsRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="SettingsExcludedAppsInputTooltip" xml:space="preserve">
+    <value>The program file name, e.g. game.exe. Open the list to pick one of the running programs.</value>
+  </data>
+  <data name="SettingsPageGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SettingsPageGeneralDescription" xml:space="preserve">
+    <value>Startup, interface language, notifications and updates.</value>
+  </data>
+  <data name="SettingsPageCorrection" xml:space="preserve">
+    <value>Correction</value>
+  </data>
+  <data name="SettingsPageCorrectionDescription" xml:space="preserve">
+    <value>How LayoutFixer fixes the keyboard layout and letter case while you type.</value>
+  </data>
+  <data name="SettingsPageDictionaries" xml:space="preserve">
+    <value>Dictionaries</value>
+  </data>
+  <data name="SettingsPageDictionariesDescription" xml:space="preserve">
+    <value>Your own words, learning from manual corrections and text replacement.</value>
+  </data>
+  <data name="SettingsPageExclusions" xml:space="preserve">
+    <value>Exclusions</value>
+  </data>
+  <data name="SettingsPageExclusionsDescription" xml:space="preserve">
+    <value>Where automatic corrections stay off. Hotkeys work everywhere.</value>
+  </data>
+  <data name="SettingsPageHotkeys" xml:space="preserve">
+    <value>Hotkeys</value>
+  </data>
+  <data name="SettingsPageHotkeysDescription" xml:space="preserve">
+    <value>Manual commands always work, even with auto-correction off.</value>
+  </data>
+  <data name="SettingsPageSound" xml:space="preserve">
+    <value>Sound</value>
+  </data>
+  <data name="SettingsPageSoundDescription" xml:space="preserve">
+    <value>A sound played when the layout is corrected.</value>
+  </data>
+  <data name="SettingsPageAdvanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="SettingsPageAdvancedDescription" xml:space="preserve">
+    <value>Backup, diagnostics and feedback.</value>
+  </data>
+  <data name="SettingsSectionStartup" xml:space="preserve">
+    <value>Startup and appearance</value>
+  </data>
+  <data name="SettingsSectionNotifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="SettingsSectionUpdates" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="SettingsCheckForUpdates" xml:space="preserve">
+    <value>Check for updates automatically (once a day)</value>
+  </data>
+  <data name="SettingsCheckForUpdatesTooltip" xml:space="preserve">
+    <value>Once a day the program asks GitHub for the latest version number and tells you when a new one is out. Nothing is downloaded or installed without your decision.</value>
+  </data>
+  <data name="SettingsCheckUpdatesNowButton" xml:space="preserve">
+    <value>Check now</value>
+  </data>
+  <data name="SettingsCheckUpdatesNowTooltip" xml:space="preserve">
+    <value>Check for a new version right now.</value>
+  </data>
+  <data name="SettingsUpdatesPrivacyNote" xml:space="preserve">
+    <value>The check only sends a request to api.github.com with the program name and version. Typed text, dictionaries and settings are never sent anywhere.</value>
+  </data>
+  <data name="UpdateStatusChecking" xml:space="preserve">
+    <value>Checking for updates…</value>
+  </data>
+  <data name="UpdateStatusAvailable" xml:space="preserve">
+    <value>New version {0} is available — details</value>
+  </data>
+  <data name="UpdateStatusUpToDate" xml:space="preserve">
+    <value>You have the latest version (checked {0})</value>
+  </data>
+  <data name="UpdateStatusNever" xml:space="preserve">
+    <value>Not checked yet.</value>
+  </data>
+  <data name="UpdateStatusFailed" xml:space="preserve">
+    <value>Could not check for updates. Check your internet connection.</value>
+  </data>
+  <data name="UpdateUpToDateStatus" xml:space="preserve">
+    <value>You have the latest version.</value>
+  </data>
+  <data name="UpdateUpToDateNotification" xml:space="preserve">
+    <value>You have the latest LayoutFixer ({0}).</value>
+  </data>
+  <data name="UpdateWindowTitle" xml:space="preserve">
+    <value>LayoutFixer update</value>
+  </data>
+  <data name="UpdateTitle" xml:space="preserve">
+    <value>Version {0} is available</value>
+  </data>
+  <data name="UpdateVersionLine" xml:space="preserve">
+    <value>Installed version: {0}.</value>
+  </data>
+  <data name="UpdateVersionLineWithDate" xml:space="preserve">
+    <value>Installed version: {0}. The new version was published on {1}.</value>
+  </data>
+  <data name="UpdateNotesHeading" xml:space="preserve">
+    <value>What's new:</value>
+  </data>
+  <data name="UpdateNoNotes" xml:space="preserve">
+    <value>No release notes attached — see the release page.</value>
+  </data>
+  <data name="UpdateHowTo" xml:space="preserve">
+    <value>"Download" opens the release page on GitHub. Exit LayoutFixer and replace the program files with the new ones — settings, dictionary and replacements are stored separately from the program and stay intact.</value>
+  </data>
+  <data name="UpdateDownloadButton" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="UpdateDownloadTooltip" xml:space="preserve">
+    <value>Open the release page on GitHub in your browser.</value>
+  </data>
+  <data name="UpdateSkipButton" xml:space="preserve">
+    <value>Skip this version</value>
+  </data>
+  <data name="UpdateSkipTooltip" xml:space="preserve">
+    <value>Do not remind me about this version. Newer versions will still be announced.</value>
+  </data>
+  <data name="UpdateLaterButton" xml:space="preserve">
+    <value>Later</value>
+  </data>
+  <data name="UpdateLaterTooltip" xml:space="preserve">
+    <value>Close this window. You will be reminded at the next check.</value>
+  </data>
+  <data name="UpdatePromptText" xml:space="preserve">
+    <value>LayoutFixer {0} is available.</value>
+  </data>
+  <data name="UpdatePromptDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="TrayCheckUpdates" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="TrayCheckUpdatesTooltip" xml:space="preserve">
+    <value>Ask GitHub whether a new version is out.</value>
+  </data>
+  <data name="TrayUpdateAvailable" xml:space="preserve">
+    <value>Version {0} is available…</value>
+  </data>
+  <data name="TrayUpdateAvailableTooltip" xml:space="preserve">
+    <value>Show what's new and open the download page.</value>
+  </data>
+  <data name="SettingsSectionLayout" xml:space="preserve">
+    <value>Keyboard layout</value>
+  </data>
+  <data name="SettingsAutoModeNote" xml:space="preserve">
+    <value>Manual correction with hotkeys always works, even with auto-correction off.</value>
+  </data>
+  <data name="SettingsSectionCase" xml:space="preserve">
+    <value>Letter case</value>
+  </data>
+  <data name="SettingsSectionUserDictionary" xml:space="preserve">
+    <value>User dictionary</value>
+  </data>
+  <data name="SettingsUserDictionaryNote" xml:space="preserve">
+    <value>Your words take priority over the built-in rules: a word from the Russian list is never switched to English and vice versa, and the same word typed in the wrong layout gets corrected.</value>
+  </data>
+  <data name="SettingsUserDictionarySummary" xml:space="preserve">
+    <value>Russian words: {0}, English: {1}</value>
+  </data>
+  <data name="SettingsManualLearnOffNote" xml:space="preserve">
+    <value>While auto-correction is off, manual correction does not learn words.</value>
+  </data>
+  <data name="SettingsSectionReplacements" xml:space="preserve">
+    <value>Text replacement</value>
+  </data>
+  <data name="SettingsReplacementsSummary" xml:space="preserve">
+    <value>Replacement pairs: {0}</value>
+  </data>
+  <data name="SettingsSectionAlwaysOff" xml:space="preserve">
+    <value>Where corrections stay off</value>
+  </data>
+  <data name="SettingsSectionExcludedApps" xml:space="preserve">
+    <value>Excluded programs</value>
+  </data>
+  <data name="SettingsSectionCaseHotkey" xml:space="preserve">
+    <value>Case change</value>
+  </data>
+  <data name="SettingsSectionBackup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="SettingsBackupNote" xml:space="preserve">
+    <value>Settings, dictionary and replacements in one file — to move to another computer or reinstall.</value>
+  </data>
+  <data name="SettingsBackupExportStatus" xml:space="preserve">
+    <value>Backup saved.</value>
+  </data>
+  <data name="SettingsBackupExportFailed" xml:space="preserve">
+    <value>Could not save the backup.</value>
+  </data>
+  <data name="SettingsImportAllConfirm" xml:space="preserve">
+    <value>Current settings will be replaced with the ones from the backup; words and replacements will be added to the existing ones. Continue?</value>
+  </data>
+  <data name="SettingsSectionInput" xml:space="preserve">
+    <value>Input buffer</value>
+  </data>
+  <data name="SettingsSectionDiagnostics" xml:space="preserve">
+    <value>Diagnostics</value>
+  </data>
+  <data name="SettingsOpenDataFolderButton" xml:space="preserve">
+    <value>Data folder…</value>
+  </data>
+  <data name="SettingsOpenDataFolderTooltip" xml:space="preserve">
+    <value>Open the folder with settings, dictionary, replacements and log.</value>
+  </data>
+  <data name="SettingsSectionFeedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="SettingsProjectPageButton" xml:space="preserve">
+    <value>Project page</value>
+  </data>
+  <data name="UserDictionaryIntro" xml:space="preserve">
+    <value>Words in the Russian list always stay Russian (and get corrected when typed in the English layout), words in the English list stay English. A new word goes to the right list automatically, by its letters.</value>
+  </data>
+  <data name="UserDictionarySearchTooltip" xml:space="preserve">
+    <value>Search by the word or by how it looks in the other layout. Esc clears.</value>
+  </data>
+  <data name="UserDictionaryAddTooltip" xml:space="preserve">
+    <value>Type a word and press Enter. Cyrillic goes to the Russian list, Latin to the English one.</value>
+  </data>
+  <data name="UserDictionaryRemoveTooltip" xml:space="preserve">
+    <value>Remove the selected words (Del).</value>
+  </data>
+  <data name="UserDictionaryClearTooltip" xml:space="preserve">
+    <value>Remove all words from the current list.</value>
+  </data>
+  <data name="UserDictionaryColWord" xml:space="preserve">
+    <value>Word</value>
+  </data>
+  <data name="UserDictionaryColWrongLayout" xml:space="preserve">
+    <value>In the other layout</value>
+  </data>
+  <data name="UserDictionaryTabTitle" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="UserDictionaryEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="UserDictionaryCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="UserDictionaryMoveTo" xml:space="preserve">
+    <value>Move to the "{0}" list</value>
+  </data>
+  <data name="UserDictionaryRemoveConfirm" xml:space="preserve">
+    <value>Remove the selected words ({0})?</value>
+  </data>
+  <data name="UserDictionaryAlreadyExists" xml:space="preserve">
+    <value>"{0}" is already in the dictionary.</value>
+  </data>
+  <data name="UserDictionaryEditDuplicate" xml:space="preserve">
+    <value>This word is already in the dictionary.</value>
+  </data>
+  <data name="UserDictionaryConflict" xml:space="preserve">
+    <value>You are adding "{0}" to the "{1}" list, but the "{3}" list contains "{2}" — the same keys in the other layout. The two entries contradict each other.
+
+Remove "{2}" and add "{0}"?</value>
+  </data>
+  <data name="UserDictionaryExportFilter" xml:space="preserve">
+    <value>JSON files (*.json)|*.json|Text, one word per line (*.txt)|*.txt</value>
+  </data>
+  <data name="UserDictionaryImportFilter" xml:space="preserve">
+    <value>Dictionaries (*.json;*.txt)|*.json;*.txt|All files (*.*)|*.*</value>
+  </data>
+  <data name="UserDictionaryExportFailed" xml:space="preserve">
+    <value>Could not save the file.</value>
+  </data>
+  <data name="UserReplacementsSearchTooltip" xml:space="preserve">
+    <value>Search by abbreviation or replacement text. Esc clears.</value>
+  </data>
+  <data name="UserReplacementsCount" xml:space="preserve">
+    <value>Pairs: {0}</value>
+  </data>
+  <data name="UserReplacementsDisabledNote" xml:space="preserve">
+    <value>Text replacement is off — the pairs do not fire.</value>
+  </data>
+  <data name="UserReplacementsEnableLink" xml:space="preserve">
+    <value>Turn on</value>
+  </data>
+  <data name="UserReplacementsErrorDuplicate" xml:space="preserve">
+    <value>This abbreviation already exists above — this pair will never fire.</value>
+  </data>
+  <data name="UserReplacementsErrorEmptyReplacement" xml:space="preserve">
+    <value>Enter the replacement text, otherwise the pair is not saved.</value>
+  </data>
+  <data name="UserReplacementsErrorEmptyTrigger" xml:space="preserve">
+    <value>Enter the abbreviation, otherwise the pair is not saved.</value>
+  </data>
+  <data name="UserReplacementsErrorSeparator" xml:space="preserve">
+    <value>The abbreviation must be one word: space, "-" and "_" end a word, so this pair would never fire.</value>
+  </data>
+  <data name="UserReplacementsExportFailed" xml:space="preserve">
+    <value>Could not save the file.</value>
+  </data>
+  <data name="UserReplacementsRemoveConfirm" xml:space="preserve">
+    <value>Remove the selected pairs ({0})?</value>
+  </data>
+  <data name="UserReplacementsColTriggerTooltip" xml:space="preserve">
+    <value>What you type — one word without spaces.</value>
+  </data>
+  <data name="UserReplacementsColCaseSensitiveTooltip" xml:space="preserve">
+    <value>Fire only when the letter case matches exactly.</value>
+  </data>
+</root>

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>false</ImplicitUsings>
+    <RootNamespace>LayoutFixer</RootNamespace>
+    <AssemblyName>LayoutFixer</AssemblyName>
+    <Version>1.11.0</Version>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <ApplicationIcon>Assets\LayoutFixer.ico</ApplicationIcon>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="LayoutFixer.Tools" />
+    <InternalsVisibleTo Include="LayoutFixer.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Dictionaries\ru-prefixes.txt" LogicalName="LayoutFixer.Dictionaries.ru-prefixes.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\ru-suffixes.txt" LogicalName="LayoutFixer.Dictionaries.ru-suffixes.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\en-prefixes.txt" LogicalName="LayoutFixer.Dictionaries.en-prefixes.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\en-suffixes.txt" LogicalName="LayoutFixer.Dictionaries.en-suffixes.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\LiveTriggers_ru.txt" LogicalName="LayoutFixer.Dictionaries.live-triggers-ru.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\LiveTriggers_en.txt" LogicalName="LayoutFixer.Dictionaries.live-triggers-en.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\FinalTriggers_ru.txt" LogicalName="LayoutFixer.Dictionaries.final-triggers-ru.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\FinalTriggers_en.txt" LogicalName="LayoutFixer.Dictionaries.final-triggers-en.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\ngrams-ru.txt" LogicalName="LayoutFixer.Dictionaries.ngrams-ru.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\ngrams-en.txt" LogicalName="LayoutFixer.Dictionaries.ngrams-en.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\short-words-ru.txt" LogicalName="LayoutFixer.Dictionaries.short-words-ru.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\short-words-en.txt" LogicalName="LayoutFixer.Dictionaries.short-words-en.txt" />
+    <EmbeddedResource Include="Resources\Dictionaries\final-words-en.txt" LogicalName="LayoutFixer.Dictionaries.final-words-en.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\layout-switch-sound1.wav" LogicalName="LayoutFixer.Sounds.sound1.wav" />
+    <EmbeddedResource Include="..\..\layout-switch-sound2.wav" LogicalName="LayoutFixer.Sounds.sound2.wav" />
+  </ItemGroup>
+</Project>

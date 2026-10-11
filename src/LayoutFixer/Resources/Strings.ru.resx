@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutCloseButton" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="AboutCloseTooltip" xml:space="preserve">
+    <value>Закрыть окно сведений о приложении.</value>
+  </data>
+  <data name="AboutGitHubLink" xml:space="preserve">
+    <value>github.com/MBudkin/LayoutFixer</value>
+  </data>
+  <data name="AboutGitHubTooltip" xml:space="preserve">
+    <value>Открыть страницу проекта на GitHub.</value>
+  </data>
+  <data name="AboutDescriptionText" xml:space="preserve">
+    <value>LayoutFixer — утилита для быстрого исправления текста, набранного в неверной раскладке клавиатуры. Программа преобразует слова и фрагменты текста между русской и английской раскладками и при необходимости переключает текущую раскладку клавиатуры.
+
+Приложение работает в области уведомлений Windows. Исправлять текст можно вручную горячими клавишами или доверить это автоматическому режиму: он распознаёт слово, набранное не в той раскладке, прямо во время набора или сразу после пробела/Enter. Собственный словарь и автозамена сокращений настраиваются под вас.</value>
+  </data>
+  <data name="AboutUsageHeading" xml:space="preserve">
+    <value>Как пользоваться:</value>
+  </data>
+  <data name="AboutUsageText" xml:space="preserve">
+    <value>•  Pause — исправить последнее набранное слово;
+•  Shift + Pause — исправить выделенный фрагмент текста;
+•  Ctrl + Shift + F9 — изменить регистр выделения или последнего слова;
+•  Ctrl + Shift + F10 — переключить выделение или последнее слово между кириллицей и транслитом;
+•  Ctrl + Shift + Space — включить или отключить программу.</value>
+  </data>
+  <data name="AboutUsageNote" xml:space="preserve">
+    <value>Все сочетания клавиш можно изменить в настройках.</value>
+  </data>
+  <data name="AboutPrivacyHeading" xml:space="preserve">
+    <value>Конфиденциальность:</value>
+  </data>
+  <data name="AboutPrivacyText" xml:space="preserve">
+    <value>LayoutFixer обрабатывает текст локально на вашем компьютере. Введённый текст не сохраняется на диск и никуда не передаётся: используется только временный буфер последних нажатий в оперативной памяти. Единственное сетевое обращение — необязательная проверка обновлений на GitHub (номер последней версии); её можно отключить в настройках.</value>
+  </data>
+  <data name="AboutDataHeading" xml:space="preserve">
+    <value>Хранение данных:</value>
+  </data>
+  <data name="AboutDataText" xml:space="preserve">
+    <value>Все файлы находятся в папке %AppData%\LayoutFixer:
+• settings.json — настройки программы;
+• user-dictionary.json — пользовательский словарь (ваши слова);
+• user-replacements.json — пользовательские замены;
+• debug.log — отладочный журнал. По умолчанию выключен; включается вручную в настройках и автоматически удаляется при выключении.</value>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Версия: {0}</value>
+  </data>
+  <data name="AboutWindowTitle" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>LayoutFixer</value>
+  </data>
+  <data name="AutostartUpdateFailed" xml:space="preserve">
+    <value>Не удалось обновить автозапуск.</value>
+  </data>
+  <data name="SettingsAutoMode" xml:space="preserve">
+    <value>Автоисправление раскладки</value>
+  </data>
+  <data name="SettingsAutoModeTooltip" xml:space="preserve">
+    <value>После нажатия пробела, Enter или Tab последнее слово проверяется по встроенным русскому и английскому словарям. Если оно явно является словом в другой раскладке — конвертируется автоматически.</value>
+  </data>
+  <data name="SettingsAutoCapitalizeSentences" xml:space="preserve">
+    <value>Начинать новое предложение с большой буквы</value>
+  </data>
+  <data name="SettingsAutoCapitalizeSentencesTooltip" xml:space="preserve">
+    <value>После точки, восклицательного или вопросительного знака и пробела первая буква следующего слова автоматически становится заглавной. Первое нажатие Break отменяет только это изменение.</value>
+  </data>
+  <data name="SettingsFixAccidentalCapsLock" xml:space="preserve">
+    <value>Исправлять случайно включённый Caps Lock</value>
+  </data>
+  <data name="SettingsFixAccidentalCapsLockTooltip" xml:space="preserve">
+    <value>Если при включённом Caps Lock слово имеет вид «пРИВЕТ», программа заменит его на «Привет» и выключит Caps Lock. Обычный верхний или нижний регистр не изменяется.</value>
+  </data>
+  <data name="SettingsAlwaysConvertSingleLetters" xml:space="preserve">
+    <value>Всегда исправлять «в», «а», «я», «и», «с», «у», «о», «к»</value>
+  </data>
+  <data name="SettingsAlwaysConvertSingleLettersTooltip" xml:space="preserve">
+    <value>Одиночная строчная буква, набранная в английской раскладке (d, f, z, b, c, e, j, r), всегда становится русским словом — даже сразу после английского слова: «Claude b ChatGPT» → «Claude и ChatGPT». Раскладка после такой буквы остаётся английской. Заглавные буквы («Plan B») не меняются. Если выключить, буква после обычного английского слова («plan b») останется как набрана.</value>
+  </data>
+  <data name="SettingsTabAsSeparator" xml:space="preserve">
+    <value>Использовать Tab как разделитель слова</value>
+  </data>
+  <data name="SettingsTabAsSeparatorTooltip" xml:space="preserve">
+    <value>Если включено — нажатие Tab завершает текущее слово и запускает автопроверку (как пробел/Enter). Если выключено — Tab не запускает проверку, но очищает буфер ввода.</value>
+  </data>
+  <data name="SettingsManualLearnGroup" xml:space="preserve">
+    <value>Запоминание слова при ручном исправлении ({0})</value>
+  </data>
+  <data name="SettingsManualLearnGroupTooltip" xml:space="preserve">
+    <value>Что делать со словом, исправленным горячей клавишей последнего слова (Pause).</value>
+  </data>
+  <data name="SettingsManualLearnRemember" xml:space="preserve">
+    <value>Запоминать</value>
+  </data>
+  <data name="SettingsManualLearnRememberTooltip" xml:space="preserve">
+    <value>Сохранять исправленное слово в пользовательский словарь автоматически, без запроса.</value>
+  </data>
+  <data name="SettingsManualLearnAsk" xml:space="preserve">
+    <value>Предлагать запомнить</value>
+  </data>
+  <data name="SettingsManualLearnAskTooltip" xml:space="preserve">
+    <value>Показывать всплывающий запрос с предложением сохранить слово в пользовательский словарь.</value>
+  </data>
+  <data name="SettingsManualLearnNever" xml:space="preserve">
+    <value>Не запоминать</value>
+  </data>
+  <data name="SettingsManualLearnNeverTooltip" xml:space="preserve">
+    <value>Не сохранять исправленные вручную слова в пользовательский словарь.</value>
+  </data>
+  <data name="SettingsSelectionLearnGroup" xml:space="preserve">
+    <value>Запоминание слова при исправлении выделения ({0})</value>
+  </data>
+  <data name="SettingsSelectionLearnGroupTooltip" xml:space="preserve">
+    <value>Что делать со словом, исправленным из выделенного фрагмента (Shift+Pause).</value>
+  </data>
+  <data name="SettingsSelectionLearnAsk" xml:space="preserve">
+    <value>Предлагать запомнить</value>
+  </data>
+  <data name="SettingsSelectionLearnAskTooltip" xml:space="preserve">
+    <value>Показывать всплывающий запрос с предложением сохранить выделенное слово в пользовательский словарь.</value>
+  </data>
+  <data name="SettingsSelectionLearnNever" xml:space="preserve">
+    <value>Не запоминать</value>
+  </data>
+  <data name="SettingsSelectionLearnNeverTooltip" xml:space="preserve">
+    <value>Не сохранять выделенные слова в пользовательский словарь.</value>
+  </data>
+  <data name="SettingsNotificationDurationLabel" xml:space="preserve">
+    <value>Показывать уведомления и запросы:</value>
+  </data>
+  <data name="SettingsNotificationDurationUnit" xml:space="preserve">
+    <value>сек</value>
+  </data>
+  <data name="SettingsNotificationDurationTooltip" xml:space="preserve">
+    <value>Сколько секунд показываются всплывающие уведомления и запросы (от 1 до 300).</value>
+  </data>
+  <data name="UserReplacementsRespectPunctuation" xml:space="preserve">
+    <value>Учитывать знаки препинания</value>
+  </data>
+  <data name="UserReplacementsRespectPunctuationTooltip" xml:space="preserve">
+    <value>Если включено, замена срабатывает и тогда, когда слово набрано со знаком препинания (например «спс,» → «спасибо,»). Окружающие знаки препинания сохраняются.</value>
+  </data>
+  <data name="SettingsDebugLog" xml:space="preserve">
+    <value>Отладочный журнал</value>
+  </data>
+  <data name="SettingsDebugLogTooltip" xml:space="preserve">
+    <value>Записывать подробный журнал работы в %AppData%\LayoutFixer\debug.log (нажатия клавиш, решения). По умолчанию выключено из соображений конфиденциальности. При выключении файл удаляется.</value>
+  </data>
+  <data name="SettingsOpenUserDictionaryButton" xml:space="preserve">
+    <value>Открыть словарь…</value>
+  </data>
+  <data name="SettingsOpenUserDictionaryButtonTooltip" xml:space="preserve">
+    <value>Открыть управление пользовательским словарём: просмотр, добавление, удаление, поиск и очистка изученных слов.</value>
+  </data>
+  <data name="TrayUserDictionary" xml:space="preserve">
+    <value>Пользовательский словарь</value>
+  </data>
+  <data name="TrayUserDictionaryTooltip" xml:space="preserve">
+    <value>Управление словами, добавленными в пользовательский словарь.</value>
+  </data>
+  <data name="TrayUserReplacements" xml:space="preserve">
+    <value>Пользовательские замены</value>
+  </data>
+  <data name="TrayUserReplacementsTooltip" xml:space="preserve">
+    <value>Управление заменами: при вводе слова и пробела оно автоматически заменяется на заданный текст.</value>
+  </data>
+  <data name="TrayAutoReplace" xml:space="preserve">
+    <value>Автозамена</value>
+  </data>
+  <data name="TrayAutoReplaceTooltip" xml:space="preserve">
+    <value>Включить или отключить пользовательские замены текста (ввод слова и пробела заменяет его на заданный текст).</value>
+  </data>
+  <data name="SettingsAutoReplace" xml:space="preserve">
+    <value>Заменять сокращения текстом (пт → привет)</value>
+  </data>
+  <data name="SettingsAutoReplaceTooltip" xml:space="preserve">
+    <value>При вводе слова из списка пользовательских замен и нажатии пробела оно заменяется на заданный текст.</value>
+  </data>
+  <data name="SettingsOpenUserReplacementsButton" xml:space="preserve">
+    <value>Открыть замены…</value>
+  </data>
+  <data name="SettingsOpenUserReplacementsButtonTooltip" xml:space="preserve">
+    <value>Открыть управление заменами текста (например: пт → привет).</value>
+  </data>
+  <data name="UserReplacementsWindowTitle" xml:space="preserve">
+    <value>Пользовательские замены</value>
+  </data>
+  <data name="UserReplacementsHint" xml:space="preserve">
+    <value>Наберите сокращение из столбца «Что» и нажмите пробел, Enter, Tab или «-» — оно заменится текстом из столбца «Чем». Изменения сохраняются сразу. Включение автозамены и учёт знаков препинания — в настройках, раздел «Словари и замены».</value>
+  </data>
+  <data name="UserReplacementsAddButton" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="UserReplacementsRemoveButton" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="UserReplacementsClearButton" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="UserReplacementsAddTooltip" xml:space="preserve">
+    <value>Добавить новую пару замены.</value>
+  </data>
+  <data name="UserReplacementsRemoveTooltip" xml:space="preserve">
+    <value>Удалить выбранную пару.</value>
+  </data>
+  <data name="UserReplacementsClearTooltip" xml:space="preserve">
+    <value>Удалить все пары.</value>
+  </data>
+  <data name="UserReplacementsClearConfirm" xml:space="preserve">
+    <value>Удалить все пары замен?</value>
+  </data>
+  <data name="UserReplacementsColTrigger" xml:space="preserve">
+    <value>Что</value>
+  </data>
+  <data name="UserReplacementsColReplacement" xml:space="preserve">
+    <value>Чем</value>
+  </data>
+  <data name="UserReplacementsColCaseSensitive" xml:space="preserve">
+    <value>Учёт регистра</value>
+  </data>
+  <data name="UserReplacementsColEnabled" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="UserDictionaryWindowTitle" xml:space="preserve">
+    <value>Пользовательский словарь</value>
+  </data>
+  <data name="UserDictionarySearch" xml:space="preserve">
+    <value>Поиск:</value>
+  </data>
+  <data name="UserDictionaryAddLabel" xml:space="preserve">
+    <value>Добавить слово:</value>
+  </data>
+  <data name="UserDictionaryAddButton" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="UserDictionaryRemoveButton" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="UserDictionaryClearButton" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="UserDictionaryClearConfirm" xml:space="preserve">
+    <value>Удалить все слова из списка «{0}» ({1})?</value>
+  </data>
+  <data name="UserDictionaryCount" xml:space="preserve">
+    <value>Слов: {0}</value>
+  </data>
+  <data name="UserDictionaryCountFiltered" xml:space="preserve">
+    <value>Показано: {0} из {1}</value>
+  </data>
+  <data name="UserDictionaryWordWithoutLetters" xml:space="preserve">
+    <value>Слово должно содержать хотя бы одну букву.</value>
+  </data>
+  <data name="AddToDictionaryPromptText" xml:space="preserve">
+    <value>Добавить «{0}» ({1}) в пользовательский словарь?</value>
+  </data>
+  <data name="AddToDictionaryYes" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AddToDictionaryNo" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="NotificationWordAddedToUserDictionary" xml:space="preserve">
+    <value>Слово «{0}» добавлено в пользовательский словарь.</value>
+  </data>
+  <data name="NotificationWordRemovedFromUserDictionary" xml:space="preserve">
+    <value>Слово «{0}» удалено из пользовательского словаря.</value>
+  </data>
+  <data name="WordAddedPopupUndo" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="UserDictionaryExportButton" xml:space="preserve">
+    <value>Экспорт…</value>
+  </data>
+  <data name="UserDictionaryExportTooltip" xml:space="preserve">
+    <value>Сохранить все слова в JSON или в текстовый файл (по слову в строке).</value>
+  </data>
+  <data name="UserDictionaryImportButton" xml:space="preserve">
+    <value>Импорт…</value>
+  </data>
+  <data name="UserDictionaryImportTooltip" xml:space="preserve">
+    <value>Добавить слова из файла экспорта (JSON) или из текстового файла (по слову в строке). Имеющиеся слова сохраняются, дубликаты пропускаются.</value>
+  </data>
+  <data name="UserDictionaryExportDone" xml:space="preserve">
+    <value>Экспортировано слов: {0}.</value>
+  </data>
+  <data name="UserDictionaryImportDone" xml:space="preserve">
+    <value>Импортировано новых слов: {0}.</value>
+  </data>
+  <data name="UserDictionaryImportFailed" xml:space="preserve">
+    <value>Не удалось прочитать файл. Убедитесь, что это корректный экспортированный словарь.</value>
+  </data>
+  <data name="ErrorDialogTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="HotkeyInvalidFormat" xml:space="preserve">
+    <value>Неверный формат горячей клавиши для «{0}»: {1}</value>
+  </data>
+  <data name="HotkeyRegistrationFailed" xml:space="preserve">
+    <value>Не удалось зарегистрировать горячую клавишу для «{0}»: {1}. Возможно, она уже занята другой программой.</value>
+  </data>
+  <data name="KeyboardHookFailed" xml:space="preserve">
+    <value>Не удалось подключить клавиатурный hook. Конвертация последнего слова не будет работать до перезапуска приложения.</value>
+  </data>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LanguageRussian" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="LanguageSystemDefault" xml:space="preserve">
+    <value>Системный язык</value>
+  </data>
+  <data name="NotificationAutoModeEnabled" xml:space="preserve">
+    <value>Автоисправление включено.</value>
+  </data>
+  <data name="NotificationAutoModeDisabled" xml:space="preserve">
+    <value>Автоисправление выключено.</value>
+  </data>
+  <data name="NotificationLanguageChanged" xml:space="preserve">
+    <value>Язык интерфейса изменен.</value>
+  </data>
+  <data name="NotificationStarted" xml:space="preserve">
+    <value>LayoutFixer запущен и работает в области уведомлений.</value>
+  </data>
+  <data name="NotificationNoConvertibleWord" xml:space="preserve">
+    <value>Не найдено слово для конвертации.</value>
+  </data>
+  <data name="SendInputFailed" xml:space="preserve">
+    <value>Не удалось вставить исправленный текст. Целевое окно может блокировать ввод.</value>
+  </data>
+  <data name="SecondInstanceMessage" xml:space="preserve">
+    <value>LayoutFixer уже запущен. Откройте настройки через значок в области уведомлений.</value>
+  </data>
+  <data name="SettingsClearBufferAfterConversion" xml:space="preserve">
+    <value>Очищать буфер после конвертации</value>
+  </data>
+  <data name="SettingsClearBufferAfterConversionTooltip" xml:space="preserve">
+    <value>Очищать короткий буфер ввода в памяти после каждой конвертации.</value>
+  </data>
+  <data name="SettingsCloseButton" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="SettingsCloseTooltip" xml:space="preserve">
+    <value>Закрыть окно настроек.</value>
+  </data>
+  <data name="SettingsHotkeyCapturedStatus" xml:space="preserve">
+    <value>Горячая клавиша сохранена.</value>
+  </data>
+  <data name="SettingsHotkeyConvertLastWord" xml:space="preserve">
+    <value>Конвертировать последнее слово</value>
+  </data>
+  <data name="SettingsHotkeyDuplicateStatus" xml:space="preserve">
+    <value>Эта горячая клавиша уже используется в настройках LayoutFixer.</value>
+  </data>
+  <data name="SettingsHotkeyHint" xml:space="preserve">
+    <value>Щёлкните поле и нажмите новое сочетание клавиш.</value>
+  </data>
+  <data name="SettingsHotkeyModifierOnlyStatus" xml:space="preserve">
+    <value>Нажмите клавишу вместе с модификаторами, а не только Ctrl/Shift/Alt.</value>
+  </data>
+  <data name="SettingsHotkeysRestoredStatus" xml:space="preserve">
+    <value>Горячие клавиши сброшены.</value>
+  </data>
+  <data name="SettingsHotkeyTextBoxTooltip" xml:space="preserve">
+    <value>Поставьте курсор в поле и нажмите новую комбинацию клавиш.</value>
+  </data>
+  <data name="SettingsHotkeyToggleEnabled" xml:space="preserve">
+    <value>Включить/отключить автоисправление</value>
+  </data>
+  <data name="SettingsHotkeyToggleCase" xml:space="preserve">
+    <value>Изменить регистр выделения или последнего слова</value>
+  </data>
+  <data name="SettingsHotkeyTransliterate" xml:space="preserve">
+    <value>Кириллица ↔ транслит для выделения или последнего слова</value>
+  </data>
+  <data name="SettingsInvertEachCharacterCase" xml:space="preserve">
+    <value>При изменении регистра инвертировать каждую букву отдельно</value>
+  </data>
+  <data name="SettingsInvertEachCharacterCaseTooltip" xml:space="preserve">
+    <value>Выключено: всё слово переводится в верхний или нижний регистр. Включено: регистр каждой буквы меняется на противоположный, например «Привет» → «пРИВЕТ».</value>
+  </data>
+  <data name="SettingsHotkeyConvertSelection" xml:space="preserve">
+    <value>Конвертировать выделенный текст</value>
+  </data>
+  <data name="SettingsInterfaceLanguageLabel" xml:space="preserve">
+    <value>Язык интерфейса:</value>
+  </data>
+  <data name="SettingsInterfaceLanguageTooltip" xml:space="preserve">
+    <value>Выберите язык интерфейса или используйте язык Windows.</value>
+  </data>
+  <data name="SettingsInvalidJson" xml:space="preserve">
+    <value>Файл настроек поврежден или имеет неверный формат. Использованы настройки по умолчанию.</value>
+  </data>
+  <data name="SettingsLanguageChangedStatus" xml:space="preserve">
+    <value>Язык применен.</value>
+  </data>
+  <data name="SettingsSavedStatus" xml:space="preserve">
+    <value>Настройки сохранены.</value>
+  </data>
+  <data name="SettingsSaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить настройки.</value>
+  </data>
+  <data name="SettingsShowNotifications" xml:space="preserve">
+    <value>Показывать уведомления</value>
+  </data>
+  <data name="SettingsShowNotificationsTooltip" xml:space="preserve">
+    <value>Показывает краткие уведомления в области уведомлений Windows.</value>
+  </data>
+  <data name="SettingsPlaySound" xml:space="preserve">
+    <value>Воспроизводить звук при конвертации</value>
+  </data>
+  <data name="SettingsPlaySoundTooltip" xml:space="preserve">
+    <value>Воспроизводить короткий звуковой сигнал при успешной конвертации.</value>
+  </data>
+  <data name="SettingsRestoreHotkeysButton" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="SettingsRestoreHotkeysTooltip" xml:space="preserve">
+    <value>Вернуть горячие клавиши по умолчанию.</value>
+  </data>
+  <data name="SettingsSaveOrAutostartFailed" xml:space="preserve">
+    <value>Не удалось сохранить настройки или обновить автозапуск.</value>
+  </data>
+  <data name="SettingsStartWithWindows" xml:space="preserve">
+    <value>Запускать вместе с Windows</value>
+  </data>
+  <data name="SettingsStartWithWindowsTooltip" xml:space="preserve">
+    <value>Добавляет LayoutFixer в автозапуск текущего пользователя Windows.</value>
+  </data>
+  <data name="SettingsWindowTitle" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="TrayAbout" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="TrayAboutTooltip" xml:space="preserve">
+    <value>Показать сведения о приложении.</value>
+  </data>
+  <data name="TrayEnabled" xml:space="preserve">
+    <value>Автоисправление</value>
+  </data>
+  <data name="TrayEnabledTooltip" xml:space="preserve">
+    <value>Включить или отключить автоисправление раскладки. Ручное исправление горячими клавишами работает всегда.</value>
+  </data>
+  <data name="TrayExit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="TrayExitTooltip" xml:space="preserve">
+    <value>Закрыть приложение.</value>
+  </data>
+  <data name="TraySettings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="TraySettingsTooltip" xml:space="preserve">
+    <value>Открыть настройки LayoutFixer.</value>
+  </data>
+  <data name="TrayTooltip" xml:space="preserve">
+    <value>LayoutFixer</value>
+  </data>
+  <data name="UnhandledProcessError" xml:space="preserve">
+    <value>Произошла внутренняя ошибка. Приложение будет закрыто.</value>
+  </data>
+  <data name="UnhandledUiError" xml:space="preserve">
+    <value>Произошла ошибка интерфейса. Продолжайте работу или перезапустите приложение.</value>
+  </data>
+  <data name="UserReplacementsExportButton" xml:space="preserve">
+    <value>Экспорт…</value>
+  </data>
+  <data name="UserReplacementsExportTooltip" xml:space="preserve">
+    <value>Сохранить все пары замен в JSON-файл.</value>
+  </data>
+  <data name="UserReplacementsImportButton" xml:space="preserve">
+    <value>Импорт…</value>
+  </data>
+  <data name="UserReplacementsImportTooltip" xml:space="preserve">
+    <value>Загрузить пары замен из JSON-файла. Имеющиеся пары сохраняются, дубликаты пропускаются.</value>
+  </data>
+  <data name="UserReplacementsJsonFilter" xml:space="preserve">
+    <value>Файлы JSON (*.json)|*.json|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="UserReplacementsExportDone" xml:space="preserve">
+    <value>Экспортировано пар: {0}.</value>
+  </data>
+  <data name="UserReplacementsImportDone" xml:space="preserve">
+    <value>Импортировано новых пар: {0}.</value>
+  </data>
+  <data name="UserReplacementsImportFailed" xml:space="preserve">
+    <value>Не удалось прочитать файл. Убедитесь, что это корректный файл замен.</value>
+  </data>
+  <data name="SettingsOpenDebugLogButton" xml:space="preserve">
+    <value>Открыть журнал…</value>
+  </data>
+  <data name="SettingsOpenDebugLogTooltip" xml:space="preserve">
+    <value>Открыть отладочный журнал (debug.log) в редакторе текста.</value>
+  </data>
+  <data name="SettingsDebugLogMissing" xml:space="preserve">
+    <value>Журнал пуст. Включите отладочный журнал и воспроизведите действия.</value>
+  </data>
+  <data name="SettingsExportAllButton" xml:space="preserve">
+    <value>Экспортировать всё…</value>
+  </data>
+  <data name="SettingsExportAllTooltip" xml:space="preserve">
+    <value>Сохранить настройки, пользовательский словарь и замены в один JSON-файл — для переноса на другой компьютер.</value>
+  </data>
+  <data name="SettingsImportAllButton" xml:space="preserve">
+    <value>Импортировать всё…</value>
+  </data>
+  <data name="SettingsImportAllTooltip" xml:space="preserve">
+    <value>Загрузить настройки, словарь и замены из резервной копии. Настройки заменяются; слова и пары добавляются (дубликаты пропускаются).</value>
+  </data>
+  <data name="SettingsBackupJsonFilter" xml:space="preserve">
+    <value>Резервная копия LayoutFixer (*.json)|*.json|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="SettingsBackupExportDone" xml:space="preserve">
+    <value>Резервная копия создана: слов — {0}, замен — {1}.</value>
+  </data>
+  <data name="SettingsBackupImportDone" xml:space="preserve">
+    <value>Импортировано: слов — {0}, замен — {1}. Настройки применены.</value>
+  </data>
+  <data name="SettingsBackupImportFailed" xml:space="preserve">
+    <value>Не удалось прочитать файл. Убедитесь, что это корректная резервная копия LayoutFixer.</value>
+  </data>
+  <data name="SettingsSoundVariantLabel" xml:space="preserve">
+    <value>Звук:</value>
+  </data>
+  <data name="SettingsSoundVariantTooltip" xml:space="preserve">
+    <value>Звуковой сигнал при успешной конвертации раскладки.</value>
+  </data>
+  <data name="SettingsSound1" xml:space="preserve">
+    <value>Звук 1</value>
+  </data>
+  <data name="SettingsSound2" xml:space="preserve">
+    <value>Звук 2</value>
+  </data>
+  <data name="SettingsSoundCustom" xml:space="preserve">
+    <value>Свой звук…</value>
+  </data>
+  <data name="SettingsSoundPreviewButton" xml:space="preserve">
+    <value>Прослушать</value>
+  </data>
+  <data name="SettingsSoundPreviewTooltip" xml:space="preserve">
+    <value>Прослушать выбранный звук с текущей громкостью.</value>
+  </data>
+  <data name="SettingsSoundCustomPathLabel" xml:space="preserve">
+    <value>Файл:</value>
+  </data>
+  <data name="SettingsSoundBrowseButton" xml:space="preserve">
+    <value>Обзор…</value>
+  </data>
+  <data name="SettingsSoundBrowseTooltip" xml:space="preserve">
+    <value>Выбрать собственный WAV-файл.</value>
+  </data>
+  <data name="SettingsSoundVolumeLabel" xml:space="preserve">
+    <value>Громкость:</value>
+  </data>
+  <data name="SettingsSoundVolumeTooltip" xml:space="preserve">
+    <value>Громкость воспроизведения звука (0–100%).</value>
+  </data>
+  <data name="SettingsSoundVolumeValue" xml:space="preserve">
+    <value>{0}%</value>
+  </data>
+  <data name="SettingsSoundFileFilter" xml:space="preserve">
+    <value>Звуки WAV (*.wav)|*.wav|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="SettingsTrayIconGroup" xml:space="preserve">
+    <value>Значок в трее:</value>
+  </data>
+  <data name="SettingsTrayIconTooltip" xml:space="preserve">
+    <value>Выберите, что LayoutFixer показывает в области уведомлений Windows.</value>
+  </data>
+  <data name="SettingsTrayIconProgram" xml:space="preserve">
+    <value>Значок программы</value>
+  </data>
+  <data name="SettingsTrayIconProgramTooltip" xml:space="preserve">
+    <value>Показывать значок LayoutFixer: цветной при включённом автоисправлении и серый при выключенном.</value>
+  </data>
+  <data name="SettingsTrayIconLanguage" xml:space="preserve">
+    <value>Язык раскладки</value>
+  </data>
+  <data name="SettingsTrayIconLanguageTooltip" xml:space="preserve">
+    <value>Показывать Ru или En для текущей раскладки клавиатуры.</value>
+  </data>
+  <data name="SettingsTrayIconFlag" xml:space="preserve">
+    <value>Флаг</value>
+  </data>
+  <data name="SettingsTrayIconFlagTooltip" xml:space="preserve">
+    <value>Показывать российский или американский флаг для текущей раскладки клавиатуры.</value>
+  </data>
+  <data name="ReportIssueButton" xml:space="preserve">
+    <value>Сообщить об ошибке</value>
+  </data>
+  <data name="ReportIssueTooltip" xml:space="preserve">
+    <value>Открыть страницу ошибок LayoutFixer на GitHub.</value>
+  </data>
+  <data name="TrayExcludeApp" xml:space="preserve">
+    <value>Не переключать в {0}</value>
+  </data>
+  <data name="TrayExcludeAppTooltip" xml:space="preserve">
+    <value>Отключить или снова включить автоматическое переключение, автозамену и исправление регистра в последней активной программе. Горячие клавиши продолжают работать.</value>
+  </data>
+  <data name="NotificationAppExcluded" xml:space="preserve">
+    <value>Автоматическое переключение отключено в {0}</value>
+  </data>
+  <data name="NotificationAppIncluded" xml:space="preserve">
+    <value>Автоматическое переключение снова работает в {0}</value>
+  </data>
+  <data name="SettingsFixTwoInitialCapitals" xml:space="preserve">
+    <value>Исправлять ДВе ЗАглавные буквы в начале слова</value>
+  </data>
+  <data name="SettingsFixTwoInitialCapitalsTooltip" xml:space="preserve">
+    <value>Если Shift отпущен на букву позже и слово получилось вида «ПРивет», программа заменит его на «Привет». Аббревиатуры и слова вроде «IDs», «GHz», «iPhone» не изменяются. Первое нажатие Break возвращает набранное написание.</value>
+  </data>
+  <data name="SettingsDisableInFullscreen" xml:space="preserve">
+    <value>Не переключать в полноэкранных приложениях (игры, видео, презентации)</value>
+  </data>
+  <data name="SettingsDisableInFullscreenTooltip" xml:space="preserve">
+    <value>Пока на переднем плане окно без рамки на весь экран, автоматическое переключение, автозамена и исправление регистра не работают. Ручные горячие клавиши продолжают работать.</value>
+  </data>
+  <data name="SettingsPasswordFieldsNote" xml:space="preserve">
+    <value>В полях ввода пароля LayoutFixer ничего не запоминает и ничего не исправляет — это работает всегда.</value>
+  </data>
+  <data name="SettingsExcludedAppsLabel" xml:space="preserve">
+    <value>В этих программах автоматическое переключение, автозамена и исправление регистра отключены. Программу можно добавить и из меню значка в трее: «Не переключать в …».</value>
+  </data>
+  <data name="SettingsExcludedAppsAdd" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="SettingsExcludedAppsRemove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="SettingsExcludedAppsInputTooltip" xml:space="preserve">
+    <value>Имя файла программы, например game.exe. Раскройте список, чтобы выбрать из запущенных программ.</value>
+  </data>
+  <data name="SettingsPageGeneral" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="SettingsPageGeneralDescription" xml:space="preserve">
+    <value>Запуск, язык интерфейса, уведомления и обновления.</value>
+  </data>
+  <data name="SettingsPageCorrection" xml:space="preserve">
+    <value>Исправление</value>
+  </data>
+  <data name="SettingsPageCorrectionDescription" xml:space="preserve">
+    <value>Как LayoutFixer исправляет раскладку и регистр букв во время набора.</value>
+  </data>
+  <data name="SettingsPageDictionaries" xml:space="preserve">
+    <value>Словари и замены</value>
+  </data>
+  <data name="SettingsPageDictionariesDescription" xml:space="preserve">
+    <value>Ваши слова, обучение на ручных исправлениях и автозамена сокращений.</value>
+  </data>
+  <data name="SettingsPageExclusions" xml:space="preserve">
+    <value>Исключения</value>
+  </data>
+  <data name="SettingsPageExclusionsDescription" xml:space="preserve">
+    <value>Где автоматические исправления не работают. Горячие клавиши работают везде.</value>
+  </data>
+  <data name="SettingsPageHotkeys" xml:space="preserve">
+    <value>Горячие клавиши</value>
+  </data>
+  <data name="SettingsPageHotkeysDescription" xml:space="preserve">
+    <value>Ручные команды работают всегда, даже при выключенном автоисправлении.</value>
+  </data>
+  <data name="SettingsPageSound" xml:space="preserve">
+    <value>Звук</value>
+  </data>
+  <data name="SettingsPageSoundDescription" xml:space="preserve">
+    <value>Звуковой сигнал при исправлении раскладки.</value>
+  </data>
+  <data name="SettingsPageAdvanced" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="SettingsPageAdvancedDescription" xml:space="preserve">
+    <value>Резервная копия, диагностика и обратная связь.</value>
+  </data>
+  <data name="SettingsSectionStartup" xml:space="preserve">
+    <value>Запуск и внешний вид</value>
+  </data>
+  <data name="SettingsSectionNotifications" xml:space="preserve">
+    <value>Уведомления</value>
+  </data>
+  <data name="SettingsSectionUpdates" xml:space="preserve">
+    <value>Обновления</value>
+  </data>
+  <data name="SettingsCheckForUpdates" xml:space="preserve">
+    <value>Автоматически проверять обновления (раз в день)</value>
+  </data>
+  <data name="SettingsCheckForUpdatesTooltip" xml:space="preserve">
+    <value>Раз в сутки программа узнаёт на GitHub номер последней версии и сообщает, если вышла новая. Ничего не скачивается и не устанавливается без вашего решения.</value>
+  </data>
+  <data name="SettingsCheckUpdatesNowButton" xml:space="preserve">
+    <value>Проверить сейчас</value>
+  </data>
+  <data name="SettingsCheckUpdatesNowTooltip" xml:space="preserve">
+    <value>Сразу проверить, вышла ли новая версия.</value>
+  </data>
+  <data name="SettingsUpdatesPrivacyNote" xml:space="preserve">
+    <value>При проверке отправляется только запрос к api.github.com с названием и версией программы. Набранный текст, словари и настройки никуда не передаются.</value>
+  </data>
+  <data name="UpdateStatusChecking" xml:space="preserve">
+    <value>Проверка обновлений…</value>
+  </data>
+  <data name="UpdateStatusAvailable" xml:space="preserve">
+    <value>Доступна новая версия {0} — подробнее</value>
+  </data>
+  <data name="UpdateStatusUpToDate" xml:space="preserve">
+    <value>Установлена последняя версия (проверено {0})</value>
+  </data>
+  <data name="UpdateStatusNever" xml:space="preserve">
+    <value>Проверка ещё не выполнялась.</value>
+  </data>
+  <data name="UpdateStatusFailed" xml:space="preserve">
+    <value>Не удалось проверить обновления. Проверьте подключение к интернету.</value>
+  </data>
+  <data name="UpdateUpToDateStatus" xml:space="preserve">
+    <value>Установлена последняя версия.</value>
+  </data>
+  <data name="UpdateUpToDateNotification" xml:space="preserve">
+    <value>У вас последняя версия LayoutFixer ({0}).</value>
+  </data>
+  <data name="UpdateWindowTitle" xml:space="preserve">
+    <value>Обновление LayoutFixer</value>
+  </data>
+  <data name="UpdateTitle" xml:space="preserve">
+    <value>Доступна версия {0}</value>
+  </data>
+  <data name="UpdateVersionLine" xml:space="preserve">
+    <value>Сейчас установлена версия {0}.</value>
+  </data>
+  <data name="UpdateVersionLineWithDate" xml:space="preserve">
+    <value>Сейчас установлена версия {0}. Новая версия опубликована {1}.</value>
+  </data>
+  <data name="UpdateNotesHeading" xml:space="preserve">
+    <value>Что нового:</value>
+  </data>
+  <data name="UpdateNoNotes" xml:space="preserve">
+    <value>Описание изменений не приложено — смотрите страницу выпуска.</value>
+  </data>
+  <data name="UpdateHowTo" xml:space="preserve">
+    <value>«Скачать» откроет страницу выпуска на GitHub. Закройте LayoutFixer и замените файлы программы новыми — настройки, словарь и замены хранятся отдельно от программы и сохранятся.</value>
+  </data>
+  <data name="UpdateDownloadButton" xml:space="preserve">
+    <value>Скачать</value>
+  </data>
+  <data name="UpdateDownloadTooltip" xml:space="preserve">
+    <value>Открыть страницу выпуска на GitHub в браузере.</value>
+  </data>
+  <data name="UpdateSkipButton" xml:space="preserve">
+    <value>Пропустить версию</value>
+  </data>
+  <data name="UpdateSkipTooltip" xml:space="preserve">
+    <value>Больше не напоминать об этой версии. О следующих версиях программа сообщит.</value>
+  </data>
+  <data name="UpdateLaterButton" xml:space="preserve">
+    <value>Позже</value>
+  </data>
+  <data name="UpdateLaterTooltip" xml:space="preserve">
+    <value>Закрыть окно. Напоминание появится при следующей проверке.</value>
+  </data>
+  <data name="UpdatePromptText" xml:space="preserve">
+    <value>Вышла новая версия LayoutFixer {0}.</value>
+  </data>
+  <data name="UpdatePromptDetails" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="TrayCheckUpdates" xml:space="preserve">
+    <value>Проверить обновления</value>
+  </data>
+  <data name="TrayCheckUpdatesTooltip" xml:space="preserve">
+    <value>Узнать на GitHub, вышла ли новая версия.</value>
+  </data>
+  <data name="TrayUpdateAvailable" xml:space="preserve">
+    <value>Доступна версия {0}…</value>
+  </data>
+  <data name="TrayUpdateAvailableTooltip" xml:space="preserve">
+    <value>Показать, что нового, и открыть страницу загрузки.</value>
+  </data>
+  <data name="SettingsSectionLayout" xml:space="preserve">
+    <value>Раскладка</value>
+  </data>
+  <data name="SettingsAutoModeNote" xml:space="preserve">
+    <value>Ручное исправление горячими клавишами работает всегда, даже когда автоисправление выключено.</value>
+  </data>
+  <data name="SettingsSectionCase" xml:space="preserve">
+    <value>Регистр букв</value>
+  </data>
+  <data name="SettingsSectionUserDictionary" xml:space="preserve">
+    <value>Пользовательский словарь</value>
+  </data>
+  <data name="SettingsUserDictionaryNote" xml:space="preserve">
+    <value>Ваши слова важнее встроенных правил: слово из русского списка не будет переведено в английскую раскладку и наоборот, а набранное в неверной раскладке — будет исправлено.</value>
+  </data>
+  <data name="SettingsUserDictionarySummary" xml:space="preserve">
+    <value>Русских слов: {0}, английских: {1}</value>
+  </data>
+  <data name="SettingsManualLearnOffNote" xml:space="preserve">
+    <value>Пока автоисправление выключено, ручное исправление ничего не запоминает.</value>
+  </data>
+  <data name="SettingsSectionReplacements" xml:space="preserve">
+    <value>Автозамена</value>
+  </data>
+  <data name="SettingsReplacementsSummary" xml:space="preserve">
+    <value>Пар замен: {0}</value>
+  </data>
+  <data name="SettingsSectionAlwaysOff" xml:space="preserve">
+    <value>Где исправления не работают</value>
+  </data>
+  <data name="SettingsSectionExcludedApps" xml:space="preserve">
+    <value>Исключённые программы</value>
+  </data>
+  <data name="SettingsSectionCaseHotkey" xml:space="preserve">
+    <value>Изменение регистра</value>
+  </data>
+  <data name="SettingsSectionBackup" xml:space="preserve">
+    <value>Резервная копия</value>
+  </data>
+  <data name="SettingsBackupNote" xml:space="preserve">
+    <value>Настройки, словарь и замены в одном файле — для переноса на другой компьютер или переустановки.</value>
+  </data>
+  <data name="SettingsBackupExportStatus" xml:space="preserve">
+    <value>Резервная копия сохранена.</value>
+  </data>
+  <data name="SettingsBackupExportFailed" xml:space="preserve">
+    <value>Не удалось сохранить резервную копию.</value>
+  </data>
+  <data name="SettingsImportAllConfirm" xml:space="preserve">
+    <value>Текущие настройки будут заменены настройками из резервной копии, а слова и замены — добавлены к имеющимся. Продолжить?</value>
+  </data>
+  <data name="SettingsSectionInput" xml:space="preserve">
+    <value>Буфер ввода</value>
+  </data>
+  <data name="SettingsSectionDiagnostics" xml:space="preserve">
+    <value>Диагностика</value>
+  </data>
+  <data name="SettingsOpenDataFolderButton" xml:space="preserve">
+    <value>Папка данных…</value>
+  </data>
+  <data name="SettingsOpenDataFolderTooltip" xml:space="preserve">
+    <value>Открыть папку с настройками, словарём, заменами и журналом.</value>
+  </data>
+  <data name="SettingsSectionFeedback" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
+  <data name="SettingsProjectPageButton" xml:space="preserve">
+    <value>Страница проекта</value>
+  </data>
+  <data name="UserDictionaryIntro" xml:space="preserve">
+    <value>Слова из списка «Русский» всегда остаются русскими (а набранные в английской раскладке — исправляются), из списка «English» — английскими. Новое слово попадает в нужный список автоматически — по буквам.</value>
+  </data>
+  <data name="UserDictionarySearchTooltip" xml:space="preserve">
+    <value>Поиск по слову или по его написанию в другой раскладке. Esc — очистить.</value>
+  </data>
+  <data name="UserDictionaryAddTooltip" xml:space="preserve">
+    <value>Введите слово и нажмите Enter. Кириллица попадёт в русский список, латиница — в английский.</value>
+  </data>
+  <data name="UserDictionaryRemoveTooltip" xml:space="preserve">
+    <value>Удалить выбранные слова (Del).</value>
+  </data>
+  <data name="UserDictionaryClearTooltip" xml:space="preserve">
+    <value>Удалить все слова текущего списка.</value>
+  </data>
+  <data name="UserDictionaryColWord" xml:space="preserve">
+    <value>Слово</value>
+  </data>
+  <data name="UserDictionaryColWrongLayout" xml:space="preserve">
+    <value>В другой раскладке</value>
+  </data>
+  <data name="UserDictionaryTabTitle" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="UserDictionaryEdit" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="UserDictionaryCopy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="UserDictionaryMoveTo" xml:space="preserve">
+    <value>Перенести в список «{0}»</value>
+  </data>
+  <data name="UserDictionaryRemoveConfirm" xml:space="preserve">
+    <value>Удалить выбранные слова ({0})?</value>
+  </data>
+  <data name="UserDictionaryAlreadyExists" xml:space="preserve">
+    <value>Слово «{0}» уже есть в словаре.</value>
+  </data>
+  <data name="UserDictionaryEditDuplicate" xml:space="preserve">
+    <value>Такое слово уже есть в словаре.</value>
+  </data>
+  <data name="UserDictionaryConflict" xml:space="preserve">
+    <value>Вы добавляете «{0}» в список «{1}», но в списке «{3}» есть «{2}» — то же слово, набранное теми же клавишами в другой раскладке. Эти записи противоречат друг другу.
+
+Удалить «{2}» и добавить «{0}»?</value>
+  </data>
+  <data name="UserDictionaryExportFilter" xml:space="preserve">
+    <value>Файлы JSON (*.json)|*.json|Текст, по слову в строке (*.txt)|*.txt</value>
+  </data>
+  <data name="UserDictionaryImportFilter" xml:space="preserve">
+    <value>Словари (*.json;*.txt)|*.json;*.txt|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="UserDictionaryExportFailed" xml:space="preserve">
+    <value>Не удалось сохранить файл.</value>
+  </data>
+  <data name="UserReplacementsSearchTooltip" xml:space="preserve">
+    <value>Поиск по сокращению или тексту замены. Esc — очистить.</value>
+  </data>
+  <data name="UserReplacementsCount" xml:space="preserve">
+    <value>Пар: {0}</value>
+  </data>
+  <data name="UserReplacementsDisabledNote" xml:space="preserve">
+    <value>Автозамена сейчас выключена — замены не срабатывают.</value>
+  </data>
+  <data name="UserReplacementsEnableLink" xml:space="preserve">
+    <value>Включить</value>
+  </data>
+  <data name="UserReplacementsErrorDuplicate" xml:space="preserve">
+    <value>Такое сокращение уже есть выше — эта пара не сработает.</value>
+  </data>
+  <data name="UserReplacementsErrorEmptyReplacement" xml:space="preserve">
+    <value>Укажите текст замены, иначе пара не сохранится.</value>
+  </data>
+  <data name="UserReplacementsErrorEmptyTrigger" xml:space="preserve">
+    <value>Укажите сокращение, иначе пара не сохранится.</value>
+  </data>
+  <data name="UserReplacementsErrorSeparator" xml:space="preserve">
+    <value>Сокращение должно быть одним словом: пробел, «-» и «_» завершают слово, и такая замена не сработает.</value>
+  </data>
+  <data name="UserReplacementsExportFailed" xml:space="preserve">
+    <value>Не удалось сохранить файл.</value>
+  </data>
+  <data name="UserReplacementsRemoveConfirm" xml:space="preserve">
+    <value>Удалить выбранные пары ({0})?</value>
+  </data>
+  <data name="UserReplacementsColTriggerTooltip" xml:space="preserve">
+    <value>Что вы набираете — одно слово без пробелов.</value>
+  </data>
+  <data name="UserReplacementsColCaseSensitiveTooltip" xml:space="preserve">
+    <value>Срабатывать только при точном совпадении регистра букв.</value>
+  </data>
+</root>
