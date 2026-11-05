@@ -622,8 +622,9 @@ internal sealed class ConversionService
         return true;
     }
 
-    // FINAL conversion: called from the terminator (Space/Enter/Tab/-) path on a
-    // background task. Uses the conservative foreground-checked switch.
+    // FINAL conversion runs synchronously in the terminator hook (Space/Enter/
+    // Tab/-). InputBatch collects the replacement and pending separator; the
+    // layout is posted without waiting inside the hook.
     public ConversionResult FinalConvert()
     {
         Logger.Log("=== FinalConvert START ===");

@@ -1009,6 +1009,7 @@ internal sealed class TrayApplicationContext : ApplicationContext
         }
 
         UpdateCheckResult result = await _updates.CheckNowAsync();
+        if (_marshal.IsDisposed) return;
         switch (result.Status)
         {
             case UpdateCheckStatus.UpdateAvailable when result.Update is not null:
@@ -1044,7 +1045,7 @@ internal sealed class TrayApplicationContext : ApplicationContext
 
     private void ShowUpdate(UpdateInfo update)
     {
-        if (_updateForm is { IsDisposed: false } && _updateForm.Release.Version == update.Version)
+        if (_updateForm is { IsDisposed: false } && (_updateForm.IsBusy || _updateForm.Release.Version == update.Version))
         {
             _updateForm.WindowState = FormWindowState.Normal;
             _updateForm.Activate();
@@ -1052,7 +1053,7 @@ internal sealed class TrayApplicationContext : ApplicationContext
         }
 
         _updateForm?.Close();
-        _updateForm = new UpdateForm(update, _updates.Skip);
+        _updateForm = new UpdateForm(update, _updates.Skip, ExitThread);
         _updateForm.FormClosed += (_, _) => _updateForm = null;
         _updateForm.Show();
         _updateForm.Activate();

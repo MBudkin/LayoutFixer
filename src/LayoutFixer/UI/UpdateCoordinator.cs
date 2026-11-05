@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LayoutFixer.Diagnostics;
@@ -20,13 +21,18 @@ internal sealed class UpdateCoordinator : IDisposable
 
     private readonly AppSettings _settings;
     private readonly Action _saveSettings;
-    private readonly Timer _timer = new();
+    private readonly System.Windows.Forms.Timer _timer = new();
+    private readonly CancellationTokenSource _lifetime = new();
+    private readonly Func<CancellationToken, Task<UpdateCheckResult>> _check;
     private Task<UpdateCheckResult>? _running;
+    private bool _disposed;
 
-    public UpdateCoordinator(AppSettings settings, Action saveSettings)
+    public UpdateCoordinator(AppSettings settings, Action saveSettings,
+        Func<CancellationToken, Task<UpdateCheckResult>>? check = null)
     {
         _settings = settings;
         _saveSettings = saveSettings;
+        _check = check ?? UpdateChecker.CheckAsync;
         _timer.Tick += (_, _) => HandleTick();
     }
 
@@ -81,8 +87,12 @@ internal sealed class UpdateCoordinator : IDisposable
 
     public void Dispose()
     {
+        if (_disposed) return;
+        _disposed = true;
         _timer.Stop();
         _timer.Dispose();
+        _lifetime.Cancel();
+        _lifetime.Dispose();
     }
 
     private bool IsSkipped(UpdateInfo update)
@@ -110,39 +120,69 @@ internal sealed class UpdateCoordinator : IDisposable
 
     private Task<UpdateCheckResult> RunAsync(bool automatic)
     {
+        if (_disposed)
+        {
+            return Task.FromResult(new UpdateCheckResult(UpdateCheckStatus.Failed));
+        }
+
         if (_running is { IsCompleted: false } running)
         {
             return running;
         }
 
-        _running = RunCoreAsync(automatic);
-        return _running;
+        // Publish the task before raising StateChanged: subscribers must see
+        // IsChecking=true and re-entrant clicks must share the same request.
+        var completion = new TaskCompletionSource<UpdateCheckResult>(TaskCreationOptions.RunContinuationsAsynchronously);
+        _running = completion.Task;
+        _ = RunCoreAsync(automatic, completion);
+        return completion.Task;
     }
 
     // Started from the UI thread (timer tick or button), so the continuation
     // after the await runs on the UI thread again.
-    private async Task<UpdateCheckResult> RunCoreAsync(bool automatic)
+    private async Task RunCoreAsync(bool automatic, TaskCompletionSource<UpdateCheckResult> completion)
     {
-        StateChanged?.Invoke(this, EventArgs.Empty);
-        UpdateCheckResult result = await UpdateChecker.CheckAsync();
-        Logger.Log($"Update check ({(automatic ? "auto" : "manual")}): {result.Status}" +
-                   (result.Update is null ? string.Empty : $" {result.Update.Version}") +
-                   (result.Error is null ? string.Empty : $" ({result.Error})"));
-
-        LastCheckFailed = result.Status == UpdateCheckStatus.Failed;
-        if (!LastCheckFailed)
+        UpdateCheckResult result;
+        try
         {
-            AvailableUpdate = result.Update;
-            _settings.LastUpdateCheckUtc = DateTimeOffset.UtcNow;
-            _saveSettings();
+            StateChanged?.Invoke(this, EventArgs.Empty);
+            result = await _check(_lifetime.Token);
+        }
+        catch (Exception ex)
+        {
+            result = new UpdateCheckResult(UpdateCheckStatus.Failed, Error: ex.Message);
         }
 
-        StateChanged?.Invoke(this, EventArgs.Empty);
-        if (automatic && UnskippedUpdate is { } update)
+        _running = null;
+        if (_disposed)
         {
-            UpdateFound?.Invoke(this, update);
+            completion.TrySetResult(result);
+            return;
         }
 
-        return result;
+        try
+        {
+            Logger.Log($"Update check ({(automatic ? "auto" : "manual")}): {result.Status}" +
+                       (result.Update is null ? string.Empty : $" {result.Update.Version}") +
+                       (result.Error is null ? string.Empty : $" ({result.Error})"));
+
+            LastCheckFailed = result.Status == UpdateCheckStatus.Failed;
+            if (!LastCheckFailed)
+            {
+                AvailableUpdate = result.Update;
+                _settings.LastUpdateCheckUtc = DateTimeOffset.UtcNow;
+                _saveSettings();
+            }
+
+            StateChanged?.Invoke(this, EventArgs.Empty);
+            if (automatic && _settings.CheckForUpdates && result.Status == UpdateCheckStatus.UpdateAvailable && UnskippedUpdate is { } update)
+            {
+                UpdateFound?.Invoke(this, update);
+            }
+        }
+        finally
+        {
+            completion.TrySetResult(result);
+        }
     }
 }

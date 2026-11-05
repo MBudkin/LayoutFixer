@@ -46,7 +46,7 @@
     <value>Конфиденциальность:</value>
   </data>
   <data name="AboutPrivacyText" xml:space="preserve">
-    <value>LayoutFixer обрабатывает текст локально на вашем компьютере. Введённый текст не сохраняется на диск и никуда не передаётся: используется только временный буфер последних нажатий в оперативной памяти. Единственное сетевое обращение — необязательная проверка обновлений на GitHub (номер последней версии); её можно отключить в настройках.</value>
+    <value>LayoutFixer обрабатывает текст локально на вашем компьютере. Введённый текст не передаётся по сети: используется только временный буфер последних нажатий в оперативной памяти. Необязательная проверка обновлений обращается к GitHub; загрузка новой версии начинается только по вашей кнопке. Настройки и словари никуда не отправляются. Отладочный журнал по умолчанию выключен.</value>
   </data>
   <data name="AboutDataHeading" xml:space="preserve">
     <value>Хранение данных:</value>
@@ -755,13 +755,13 @@
     <value>Описание изменений не приложено — смотрите страницу выпуска.</value>
   </data>
   <data name="UpdateHowTo" xml:space="preserve">
-    <value>«Скачать» откроет страницу выпуска на GitHub. Закройте LayoutFixer и замените файлы программы новыми — настройки, словарь и замены хранятся отдельно от программы и сохранятся.</value>
+    <value>Обновление будет загружено и установлено в текущую папку программы. LayoutFixer перезапустится; настройки, словарь и замены сохранятся.</value>
   </data>
   <data name="UpdateDownloadButton" xml:space="preserve">
-    <value>Скачать</value>
+    <value>Скачать и обновить</value>
   </data>
   <data name="UpdateDownloadTooltip" xml:space="preserve">
-    <value>Открыть страницу выпуска на GitHub в браузере.</value>
+    <value>Скачать новую версию с GitHub, заменить текущую программу и перезапустить её.</value>
   </data>
   <data name="UpdateSkipButton" xml:space="preserve">
     <value>Пропустить версию</value>
@@ -953,5 +953,35 @@
   </data>
   <data name="UserReplacementsColCaseSensitiveTooltip" xml:space="preserve">
     <value>Срабатывать только при точном совпадении регистра букв.</value>
+  </data>
+  <data name="UpdateManualHowTo" xml:space="preserve">
+    <value>Автоустановка для этой сборки недоступна. Откройте страницу выпуска, чтобы скачать подходящий файл.</value>
+  </data>
+  <data name="UpdateReleasePageButton" xml:space="preserve">
+    <value>Страница выпуска</value>
+  </data>
+  <data name="UpdateReleasePageTooltip" xml:space="preserve">
+    <value>Открыть страницу выпуска на GitHub в браузере.</value>
+  </data>
+  <data name="UpdateCancelButton" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="UpdateCancelTooltip" xml:space="preserve">
+    <value>Отменить загрузку и продолжить работу с текущей версией.</value>
+  </data>
+  <data name="UpdateDownloading" xml:space="preserve">
+    <value>Загрузка и проверка обновления… {0}%</value>
+  </data>
+  <data name="UpdateInstalling" xml:space="preserve">
+    <value>Подготовка к замене файлов и перезапуску…</value>
+  </data>
+  <data name="UpdateDownloadCancelled" xml:space="preserve">
+    <value>Загрузка отменена. Текущая версия продолжает работать.</value>
+  </data>
+  <data name="UpdateInstallFailed" xml:space="preserve">
+    <value>Не удалось обновить программу. Проверьте подключение и доступ на запись в папку программы, затем повторите попытку. Подробности — при наведении на это сообщение.</value>
+  </data>
+  <data name="UpdateInstallFailedAfterExit" xml:space="preserve">
+    <value>Не удалось установить обновление. Предыдущая версия восстановлена, если это было возможно. Подробности: {0}</value>
   </data>
 </root>

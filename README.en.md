@@ -71,7 +71,7 @@ no account. Nothing you type ever leaves your computer.
 - 🛡️ **Stays out of the way.** Off in password fields, games and other
   full-screen apps, programs from your exclusion list, and while a third layout
   (e.g. Ukrainian) is active.
-- 🔔 **Tells you about updates**, but never downloads or installs anything itself.
+- 🔔 **Tells you about updates** and displays formatted release notes. Click **Download and update** to download the new version, replace the program in its current folder and restart it. Settings and dictionaries are preserved.
 - 🌐 Russian and English user interface.
 
 ## Screenshots
@@ -169,9 +169,10 @@ program can offer to remember the word; see
   There is no typing history: only the last 128 typed characters are kept in
   memory for corrections, until the program exits.
 - What you type into password fields does not even enter that buffer.
-- The only network access is the optional update check: a request to
+- Optional update checks send a request to
   `api.github.com` with the program name and version and none of your data. It
-  can be turned off in **Settings → General**.
+  can be turned off in **Settings → General**. Files are downloaded from GitHub
+  only when you click **Download and update**; the download can be cancelled.
 - The debug log is off by default. Turn it on only to investigate a problem and
   delete it afterwards.
 

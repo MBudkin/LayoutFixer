@@ -8,7 +8,7 @@
     <ImplicitUsings>false</ImplicitUsings>
     <RootNamespace>LayoutFixer</RootNamespace>
     <AssemblyName>LayoutFixer</AssemblyName>
-    <Version>1.11.0</Version>
+    <Version>1.12.0</Version>
     <InvariantGlobalization>false</InvariantGlobalization>
     <ApplicationIcon>Assets\LayoutFixer.ico</ApplicationIcon>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>

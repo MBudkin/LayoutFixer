@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
@@ -10,7 +11,12 @@ using System.Threading.Tasks;
 namespace LayoutFixer.Services;
 
 /// <summary>A published release that is newer than the running build.</summary>
-internal sealed record UpdateInfo(Version Version, string Title, string Notes, string PageUrl, DateTimeOffset? PublishedAt);
+internal sealed record UpdateInfo(Version Version, string Title, string Notes, string PageUrl, DateTimeOffset? PublishedAt)
+{
+    public IReadOnlyList<UpdateAsset> Assets { get; init; } = Array.Empty<UpdateAsset>();
+}
+
+internal sealed record UpdateAsset(string Name, string DownloadUrl, long Size, string? Digest = null);
 
 internal enum UpdateCheckStatus
 {
@@ -107,12 +113,33 @@ internal static class UpdateChecker
             ? value
             : null;
 
+        var assets = new List<UpdateAsset>();
+        if (root.TryGetProperty("assets", out JsonElement assetArray) && assetArray.ValueKind == JsonValueKind.Array)
+        {
+            foreach (JsonElement asset in assetArray.EnumerateArray())
+            {
+                if (asset.ValueKind != JsonValueKind.Object || GetString(asset, "state") != "uploaded")
+                {
+                    continue;
+                }
+
+                string name = GetString(asset, "name");
+                string url = GetString(asset, "browser_download_url");
+                long size = asset.TryGetProperty("size", out JsonElement sizeValue) && sizeValue.ValueKind == JsonValueKind.Number && sizeValue.TryGetInt64(out long bytes)
+                    ? bytes : 0;
+                if (UpdateInstaller.IsProjectAssetUrl(url, name) && size > 0 && size <= UpdateInstaller.MaxDownloadBytes)
+                {
+                    assets.Add(new UpdateAsset(name, url, size, GetString(asset, "digest")));
+                }
+            }
+        }
+
         return new UpdateInfo(
             version,
             string.IsNullOrWhiteSpace(title) ? tag : title.Trim(),
             GetString(root, "body").Trim(),
             page,
-            published);
+            published) { Assets = assets.AsReadOnly() };
     }
 
     /// <summary>"v1.10.0", "1.10", "LayoutFixer 1.10.0-beta" → 1.10.0; null without a number.</summary>

@@ -46,7 +46,7 @@ The application runs in the Windows notification area. You can correct text manu
     <value>Privacy:</value>
   </data>
   <data name="AboutPrivacyText" xml:space="preserve">
-    <value>LayoutFixer processes text locally on your computer. Typed text is never saved to disk or sent anywhere: only a temporary in-memory buffer of recent keystrokes is used. The only network access is the optional update check on GitHub (the latest version number); it can be turned off in Settings.</value>
+    <value>LayoutFixer processes text locally on your computer. Typed text is never sent over the network: only a temporary buffer of recent keystrokes is kept in memory. Optional update checks contact GitHub; a new version is downloaded only when you click the update button. Settings and dictionaries are never sent anywhere. The debug log is off by default.</value>
   </data>
   <data name="AboutDataHeading" xml:space="preserve">
     <value>Data storage:</value>
@@ -755,13 +755,13 @@ The application runs in the Windows notification area. You can correct text manu
     <value>No release notes attached — see the release page.</value>
   </data>
   <data name="UpdateHowTo" xml:space="preserve">
-    <value>"Download" opens the release page on GitHub. Exit LayoutFixer and replace the program files with the new ones — settings, dictionary and replacements are stored separately from the program and stay intact.</value>
+    <value>The update will be downloaded and installed in the current program folder. LayoutFixer will restart; settings, dictionary and replacements will be preserved.</value>
   </data>
   <data name="UpdateDownloadButton" xml:space="preserve">
-    <value>Download</value>
+    <value>Download and update</value>
   </data>
   <data name="UpdateDownloadTooltip" xml:space="preserve">
-    <value>Open the release page on GitHub in your browser.</value>
+    <value>Download the new version from GitHub, replace the current program and restart it.</value>
   </data>
   <data name="UpdateSkipButton" xml:space="preserve">
     <value>Skip this version</value>
@@ -953,5 +953,35 @@ Remove "{2}" and add "{0}"?</value>
   </data>
   <data name="UserReplacementsColCaseSensitiveTooltip" xml:space="preserve">
     <value>Fire only when the letter case matches exactly.</value>
+  </data>
+  <data name="UpdateManualHowTo" xml:space="preserve">
+    <value>Automatic installation is unavailable for this build. Open the release page to download a suitable file.</value>
+  </data>
+  <data name="UpdateReleasePageButton" xml:space="preserve">
+    <value>Release page</value>
+  </data>
+  <data name="UpdateReleasePageTooltip" xml:space="preserve">
+    <value>Open the release page on GitHub in your browser.</value>
+  </data>
+  <data name="UpdateCancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="UpdateCancelTooltip" xml:space="preserve">
+    <value>Cancel the download and keep using the current version.</value>
+  </data>
+  <data name="UpdateDownloading" xml:space="preserve">
+    <value>Downloading and checking the update… {0}%</value>
+  </data>
+  <data name="UpdateInstalling" xml:space="preserve">
+    <value>Preparing to replace files and restart…</value>
+  </data>
+  <data name="UpdateDownloadCancelled" xml:space="preserve">
+    <value>Download cancelled. The current version is still running.</value>
+  </data>
+  <data name="UpdateInstallFailed" xml:space="preserve">
+    <value>Could not update the program. Check your connection and write access to the program folder, then try again. Hover over this message for details.</value>
+  </data>
+  <data name="UpdateInstallFailedAfterExit" xml:space="preserve">
+    <value>Could not install the update. The previous version was restored if possible. Details: {0}</value>
   </data>
 </root>
